@@ -62,7 +62,7 @@ def generate_launch_description():
             "-world", world_name,
             "-name", "my_robot",
             "-topic", "/robot_description",
-            '-z', '4'
+            '-z', '0.01'
         ],
         output="screen",
     )

@@ -230,37 +230,49 @@
 
   <!-- Joint position controller plugins for Ignition -->
   <gazebo>
-    <plugin filename="gz-sim-joint-position-controller-system"
-            name="gz::sim::systems::JointPositionController">
+    <plugin
+        filename="ignition-gazebo-sensors-system"
+        name="ignition::gazebo::systems::Sensors">
+        <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <plugin
+      filename="ignition-gazebo-joint-position-controller-system"
+      name="ignition::gazebo::systems::JointPositionController">
       <joint_name>pan_joint</joint_name>
-      <topic>/cmd_pan</topic>
+      <!-- <topic>/cmd_pan</topic> -->
       <p_gain>5.0</p_gain>
-      <i_gain>0.0</i_gain>
-      <d_gain>0.0</d_gain>
+      <i_gain>1.0</i_gain>
+      <d_gain>1.0</d_gain>
       <initial_position>0.0</initial_position>
     </plugin>
-    <plugin filename="gz-sim-joint-position-controller-system"
-            name="gz::sim::systems::JointPositionController">
+
+    <plugin
+      filename="ignition-gazebo-joint-position-controller-system"
+      name="ignition::gazebo::systems::JointPositionController">
       <joint_name>tilt_joint</joint_name>
-      <topic>/cmd_tilt</topic>
+      <!-- <topic>/cmd_tilt</topic> -->
       <p_gain>5.0</p_gain>
       <i_gain>0.0</i_gain>
       <d_gain>0.0</d_gain>
       <initial_position>0.0</initial_position>
     </plugin>
-    <plugin filename="gz-sim-joint-position-controller-system"
-            name="gz::sim::systems::JointPositionController">
+
+    <plugin
+      filename="ignition-gazebo-joint-position-controller-system"
+      name="ignition::gazebo::systems::JointPositionController">
       <joint_name>zoom_joint</joint_name>
-      <topic>/cmd_zoom</topic>
+      <!-- <topic>/cmd_zoom</topic> -->
       <p_gain>10.0</p_gain>  <!-- higher P for prismatic if needed to overcome gravity -->
       <i_gain>0.0</i_gain>
       <d_gain>0.0</d_gain>
       <initial_position>0.0</initial_position>
     </plugin>
+
   </gazebo>
 
   <!-- Transmissions for ros2_control (optional: needed if using ros2_control controllers) --> <!-- Example: Simple position interfaces for each joint -->
-  <transmission name="pan_joint_trans">
+  <!-- <transmission name="pan_joint_trans">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="pan_joint">
         <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -290,6 +302,6 @@
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1.0</mechanicalReduction>
     </actuator>
-</transmission>
+</transmission> -->
 
 </robot>

@@ -1,0 +1,19 @@
+[0.267s] Invoking command in '/home/omar/ptz_ws/build/ptz_robot': PYTHONPATH=/home/omar/ptz_ws/build/ptz_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/omar/ptz_ws/build/ptz_robot/build --no-deps symlink_data
+[0.353s] running develop
+[0.401s] running egg_info
+[0.401s] creating my_robot.egg-info
+[0.401s] writing my_robot.egg-info/PKG-INFO
+[0.401s] writing dependency_links to my_robot.egg-info/dependency_links.txt
+[0.401s] writing entry points to my_robot.egg-info/entry_points.txt
+[0.401s] writing requirements to my_robot.egg-info/requires.txt
+[0.401s] writing top-level names to my_robot.egg-info/top_level.txt
+[0.401s] writing manifest file 'my_robot.egg-info/SOURCES.txt'
+[0.402s] reading manifest file 'my_robot.egg-info/SOURCES.txt'
+[0.402s] writing manifest file 'my_robot.egg-info/SOURCES.txt'
+[0.402s] running build_ext
+[0.402s] Creating /home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages/my-robot.egg-link (link to .)
+[0.403s] 
+[0.403s] Installed /home/omar/ptz_ws/build/ptz_robot
+[0.403s] running symlink_data
+[0.403s] error: can't copy '/home/omar/ptz_ws/build/ptz_robot/resource/my_robot': doesn't exist or not a regular file
+[0.415s] Invoked command in '/home/omar/ptz_ws/build/ptz_robot' returned '1': PYTHONPATH=/home/omar/ptz_ws/build/ptz_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/omar/ptz_ws/build/ptz_robot/build --no-deps symlink_data

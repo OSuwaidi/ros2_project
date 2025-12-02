@@ -1,0 +1,26 @@
+running develop
+running egg_info
+creating ptz_robot.egg-info
+writing ptz_robot.egg-info/PKG-INFO
+writing dependency_links to ptz_robot.egg-info/dependency_links.txt
+writing entry points to ptz_robot.egg-info/entry_points.txt
+writing requirements to ptz_robot.egg-info/requires.txt
+writing top-level names to ptz_robot.egg-info/top_level.txt
+writing manifest file 'ptz_robot.egg-info/SOURCES.txt'
+reading manifest file 'ptz_robot.egg-info/SOURCES.txt'
+writing manifest file 'ptz_robot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages/ptz-robot.egg-link (link to .)
+
+Installed /home/omar/ptz_ws/build/ptz_robot
+running symlink_data
+creating /home/omar/ptz_ws/install/ptz_robot/share/ament_index
+creating /home/omar/ptz_ws/install/ptz_robot/share/ament_index/resource_index
+creating /home/omar/ptz_ws/install/ptz_robot/share/ament_index/resource_index/packages
+symbolically linking /home/omar/ptz_ws/build/ptz_robot/resource/ptz_robot -> /home/omar/ptz_ws/install/ptz_robot/share/ament_index/resource_index/packages
+symbolically linking /home/omar/ptz_ws/build/ptz_robot/package.xml -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot
+creating /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/launch
+symbolically linking /home/omar/ptz_ws/build/ptz_robot/launch/ptz.launch.py -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/launch
+creating /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/urdf
+symbolically linking /home/omar/ptz_ws/build/ptz_robot/urdf/ptz_robot2.urdf.xacro -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/urdf
+symbolically linking /home/omar/ptz_ws/build/ptz_robot/urdf/ptz_robot.urdf.xacro -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/urdf

@@ -1,0 +1,27 @@
+[0.214s] Invoking command in '/home/omar/ptz_ws/build/ptz_robot': PYTHONPATH=/home/omar/ptz_ws/build/ptz_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/omar/ptz_ws/build/ptz_robot/build --no-deps symlink_data
+[0.300s] running develop
+[0.352s] running egg_info
+[0.353s] creating ptz_robot.egg-info
+[0.353s] writing ptz_robot.egg-info/PKG-INFO
+[0.353s] writing dependency_links to ptz_robot.egg-info/dependency_links.txt
+[0.353s] writing entry points to ptz_robot.egg-info/entry_points.txt
+[0.353s] writing requirements to ptz_robot.egg-info/requires.txt
+[0.353s] writing top-level names to ptz_robot.egg-info/top_level.txt
+[0.353s] writing manifest file 'ptz_robot.egg-info/SOURCES.txt'
+[0.353s] reading manifest file 'ptz_robot.egg-info/SOURCES.txt'
+[0.354s] writing manifest file 'ptz_robot.egg-info/SOURCES.txt'
+[0.354s] running build_ext
+[0.354s] Creating /home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages/ptz-robot.egg-link (link to .)
+[0.355s] 
+[0.355s] Installed /home/omar/ptz_ws/build/ptz_robot
+[0.355s] running symlink_data
+[0.355s] creating /home/omar/ptz_ws/install/ptz_robot/share/ament_index
+[0.355s] creating /home/omar/ptz_ws/install/ptz_robot/share/ament_index/resource_index
+[0.355s] creating /home/omar/ptz_ws/install/ptz_robot/share/ament_index/resource_index/packages
+[0.355s] symbolically linking /home/omar/ptz_ws/build/ptz_robot/resource/ptz_robot -> /home/omar/ptz_ws/install/ptz_robot/share/ament_index/resource_index/packages
+[0.355s] symbolically linking /home/omar/ptz_ws/build/ptz_robot/package.xml -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot
+[0.355s] creating /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/launch
+[0.355s] symbolically linking /home/omar/ptz_ws/build/ptz_robot/launch/ptz.launch.py -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/launch
+[0.355s] creating /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/urdf
+[0.355s] symbolically linking /home/omar/ptz_ws/build/ptz_robot/urdf/ptz_robot.urdf.xacro -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/urdf
+[0.367s] Invoked command in '/home/omar/ptz_ws/build/ptz_robot' returned '0': PYTHONPATH=/home/omar/ptz_ws/build/ptz_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/omar/ptz_ws/build/ptz_robot/build --no-deps symlink_data

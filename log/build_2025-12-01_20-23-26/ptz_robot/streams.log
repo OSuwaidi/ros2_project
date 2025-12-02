@@ -1,0 +1,16 @@
+[0.250s] Invoking command in '/home/omar/ptz_ws/build/ptz_robot': PYTHONPATH=/home/omar/ptz_ws/build/ptz_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/omar/ptz_ws/build/ptz_robot/build --no-deps symlink_data
+[0.350s] running develop
+[0.406s] running egg_info
+[0.407s] writing ptz_robot.egg-info/PKG-INFO
+[0.407s] writing dependency_links to ptz_robot.egg-info/dependency_links.txt
+[0.407s] writing entry points to ptz_robot.egg-info/entry_points.txt
+[0.407s] writing requirements to ptz_robot.egg-info/requires.txt
+[0.407s] writing top-level names to ptz_robot.egg-info/top_level.txt
+[0.408s] reading manifest file 'ptz_robot.egg-info/SOURCES.txt'
+[0.408s] writing manifest file 'ptz_robot.egg-info/SOURCES.txt'
+[0.408s] running build_ext
+[0.409s] Creating /home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages/ptz-robot.egg-link (link to .)
+[0.409s] 
+[0.409s] Installed /home/omar/ptz_ws/build/ptz_robot
+[0.409s] running symlink_data
+[0.422s] Invoked command in '/home/omar/ptz_ws/build/ptz_robot' returned '0': PYTHONPATH=/home/omar/ptz_ws/build/ptz_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/omar/ptz_ws/build/ptz_robot/build --no-deps symlink_data

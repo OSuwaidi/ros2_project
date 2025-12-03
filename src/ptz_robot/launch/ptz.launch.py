@@ -103,10 +103,11 @@ def generate_launch_description():
             # Use the bridged camera topic
             "input_image_topic": "/ptz/camera/image_raw",
             "yolo_encoding": "rgb8",
-            # Choose model size: yolov8n.pt / yolov8s.pt / ...
-            "model": "yolov8n.pt",
-            "threshold": "0.6",
+            "model": "yoloe-11l-seg-pf.pt",
+            "threshold": "0.55",
+            "iou": "0.1",
             "device": "cpu",
+            "max_det": "5",
             "use_tracking": "False",
             "imgsz_width": "320",
             "imgsz_height": "240",
@@ -114,14 +115,35 @@ def generate_launch_description():
         }.items(),
     )
 
-    # Visualize camera/YOLO image topics:
-    rqt_node = Node(
-        package="rqt_image_view",
-        executable="rqt_image_view",
+    yolo_image_view = Node(
+        package="image_view",
+        executable="image_view",
+        name="yolo_image_view",
         output="screen",
+        remappings=[
+            ("image", "/yolo/dbg_image"),
+        ],
+        parameters=[
+            {"window_name": "YOLO Debug Image"},
+        ],
     )
 
-    # rqt_node2 = Node(
+    camera_compressed_view = Node(
+        package="image_view",
+        executable="image_view",
+        name="camera_compressed_view",
+        output="screen",
+        remappings=[
+            ("image", "/ptz/camera/image_raw"),
+        ],
+        parameters=[
+            {"transport": "compressed"},
+            {"window_name": "PTZ Camera (Compressed)"},
+        ],
+    )
+
+    # Visualize camera/YOLO image topics (relatively heavier):
+    # rqt_node = Node(
     #     package="rqt_image_view",
     #     executable="rqt_image_view",
     #     output="screen",
@@ -142,6 +164,7 @@ def generate_launch_description():
             image_bridge,
             param_bridge,
             yolov8_launch,
-            rqt_node
+            yolo_image_view,
+            camera_compressed_view
         ]
     )

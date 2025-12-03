@@ -20,7 +20,7 @@ def generate_launch_description():
         ]
     )
 
-    # Run xacro and **explicitly** say: this is a string parameter
+    # Run xacro and **explicitly** generate URDF as a string
     robot_description = ParameterValue(
         Command(["xacro", " ", xacro_file]), value_type=str
     )
@@ -39,7 +39,7 @@ def generate_launch_description():
 
     # Launch Gazebo Sim (.sdf World)
     world_file_arg = DeclareLaunchArgument(  # define an argument named 'world' with a default value of 'empty.sdf'
-        "world",
+        name="world",
         default_value="empty.sdf",
         description="Gazebo world .sdf file name"
     )
@@ -68,19 +68,18 @@ def generate_launch_description():
         output="screen",
     )
 
-    # ROS-Gazebo bridge: connects the Gazebo camera topic to ROS 2
-    # image bridge: Gazebo /ptz/camera/image_raw -> ROS /ptz/camera/image_raw
+    # Image bridge connecting Gazebo Transport topic: /ptz/camera/image_raw -> republished ROS 2 topic: /ptz/camera/image_raw
     image_bridge = Node(
         package="ros_gz_image",
         executable="image_bridge",
         name="gz_image_bridge_ptz",
         output="screen",
         arguments=[
-            "/ptz/camera/image_raw",  # Gazebo image topic to bridge
+            "/ptz/camera/image_raw",
         ],
     )
 
-    # parameter bridge for camera_info + zoom joint command
+    # Parameter bridge for camera_info + zoom joint command
     param_bridge = Node(
         package="ros_gz_bridge",
         executable="parameter_bridge",
@@ -94,7 +93,7 @@ def generate_launch_description():
         ],
     )
 
-    # Include YOLOv8 launch (from yolo_ros / yolo_bringup) listening on /camera/image_raw)
+    # Include YOLOv8 launch (via yolo_bringup) listening on /camera/image_raw
     yolo_bringup_dir = get_package_share_directory("yolo_bringup")
     yolov8_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -103,13 +102,15 @@ def generate_launch_description():
         launch_arguments={
             # Use the bridged camera topic
             "input_image_topic": "/ptz/camera/image_raw",
-            # Encoding from ros_gz_image is typically rgb8 for R8G8B8 images
             "yolo_encoding": "rgb8",
             # Choose model size: yolov8n.pt / yolov8s.pt / ...
             "model": "yolov8n.pt",
-            # Optional extra params (only if you want to override defaults):
             "threshold": "0.6",
             "device": "cpu",
+            "use_tracking": "False",
+            "imgsz_width": "320",
+            "imgsz_height": "240",
+            # "image_reliability": "2",  # "Best Effort QoS"
         }.items(),
     )
 
@@ -119,6 +120,12 @@ def generate_launch_description():
         executable="rqt_image_view",
         output="screen",
     )
+
+    # rqt_node2 = Node(
+    #     package="rqt_image_view",
+    #     executable="rqt_image_view",
+    #     output="screen",
+    # )
 
     # PTZ control node (NBV + IBVS logic)
     # controller_node = Node(

@@ -1,0 +1,1 @@
+/home/omar/ptz_ws/build/yolo_msgs/rosidl_generator_c/yolo_msgs/msg/detail/detection__type_support.h

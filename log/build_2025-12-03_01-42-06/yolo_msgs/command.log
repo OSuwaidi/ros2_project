@@ -1,0 +1,6 @@
+Invoking command in '/home/omar/ptz_ws/build/yolo_msgs': CMAKE_PREFIX_PATH=/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble /usr/bin/cmake /home/omar/ptz_ws/src/yolo_ros/yolo_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omar/ptz_ws/install/yolo_msgs
+Invoked command in '/home/omar/ptz_ws/build/yolo_msgs' returned '0': CMAKE_PREFIX_PATH=/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble /usr/bin/cmake /home/omar/ptz_ws/src/yolo_ros/yolo_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/omar/ptz_ws/install/yolo_msgs
+Invoking command in '/home/omar/ptz_ws/build/yolo_msgs': CMAKE_PREFIX_PATH=/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble /usr/bin/cmake --build /home/omar/ptz_ws/build/yolo_msgs -- -j8 -l8
+Invoked command in '/home/omar/ptz_ws/build/yolo_msgs' returned '0': CMAKE_PREFIX_PATH=/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble /usr/bin/cmake --build /home/omar/ptz_ws/build/yolo_msgs -- -j8 -l8
+Invoking command in '/home/omar/ptz_ws/build/yolo_msgs': CMAKE_PREFIX_PATH=/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble /usr/bin/cmake --install /home/omar/ptz_ws/build/yolo_msgs
+Invoked command in '/home/omar/ptz_ws/build/yolo_msgs' returned '0': CMAKE_PREFIX_PATH=/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble /usr/bin/cmake --install /home/omar/ptz_ws/build/yolo_msgs

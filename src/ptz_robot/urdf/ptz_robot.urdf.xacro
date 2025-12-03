@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ptz_camera_robot">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ptz_robot">
 
   <xacro:property name="base_radius" value="0.12" />
   <xacro:property name="base_height" value="0.08" />
@@ -7,11 +7,11 @@
   <xacro:property name="pan_link_length" value="0.4" />
   <xacro:property name="pan_link_radius" value="0.04" />
 
-  <xacro:property name="tilt_box_x" value="0.15" />
-  <xacro:property name="tilt_box_y" value="0.10" />
-  <xacro:property name="tilt_box_z" value="0.08" />
-  <xacro:property name="lens_length" value="0.14" />
-  <xacro:property name="lens_radius" value="0.035" />
+  <xacro:property name="tilt_box_x" value="0.2" />
+  <xacro:property name="tilt_box_y" value="0.13" />
+  <xacro:property name="tilt_box_z" value="0.1" />
+  <xacro:property name="lens_length" value="0.2" />
+  <xacro:property name="lens_radius" value="0.045" />
 
   <material name="dark_grey">
     <color rgba="0.2 0.2 0.2 1"/>
@@ -62,13 +62,13 @@
     <xacro:inertial_matrix mass="2.0"/>
   </link>
 
-  <joint name="pan_joint" type="revolute">
+  <joint name="pan_joint" type="continuous">
     <parent link="base_link"/>
     <child link="pan_link"/>
     <origin xyz="0 0 ${base_height/2}" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-3.14" upper="3.14" effort="300" velocity="0.5"/>
-    <dynamics damping="5" friction="1"/>
+    <!-- <limit lower="-3.14" upper="3.14" effort="30" velocity="2.0"/> -->
+    <dynamics damping="0.1" friction="0.1"/>
   </joint>
 
   <!-- ==========================
@@ -96,8 +96,8 @@
     <child link="tilt_link"/>
     <origin xyz="0 0 ${pan_link_length}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit lower="-1.2" upper="0.3" effort="300" velocity="0.5"/>
-    <dynamics damping="5" friction="1"/>
+    <limit lower="-1.2" upper="0.5" effort="10" velocity="1.5"/>
+    <dynamics damping="0.1" friction="0.5"/>
   </joint>
 
   <!-- ==========================
@@ -123,8 +123,8 @@
     <child link="camera_lens_link"/>
     <origin xyz="${tilt_box_x/2 + 0.01} 0 0" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit lower="0.0" upper="0.1" effort="100.0" velocity="0.2"/>
-    <dynamics damping="5.0"/>
+    <limit lower="0.0" upper="0.16" effort="100.0" velocity="0.5"/>
+    <dynamics damping="0.1"/>
   </joint>
 
   <!-- ==========================
@@ -156,15 +156,25 @@
   <!-- ==========================
        Camera body
        ========================== -->
-  <link name="camera_glass_link">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
-      <geometry>
-        <cylinder length="0.01" radius="${lens_radius - 0.005}"/>
-      </geometry>
-      <material name="sensor_glass"/>
-    </visual>
-  </link>
+       <link name="camera_glass_link">
+         <!-- sensor glass -->
+         <visual name="glass_disk">
+           <origin xyz="0 0 0" rpy="0 ${pi/2} 0"/>
+           <geometry>
+             <cylinder length="0.01" radius="${lens_radius - 0.005}"/>
+           </geometry>
+           <material name="sensor_glass"/>
+         </visual>
+
+         <!-- inner “aperture” disk for depth -->
+         <visual name="inner_aperture">
+           <origin xyz="-0.001 0 0" rpy="0 ${pi/2} 0"/>
+           <geometry>
+             <cylinder length="0.003" radius="${lens_radius*0.55}"/>
+           </geometry>
+           <material name="lens_black"/>
+         </visual>
+       </link>
 
   <joint name="camera_optical_joint" type="fixed">
     <parent link="camera_glass_link"/>
@@ -198,7 +208,7 @@
   </gazebo>
 
   <gazebo reference="camera_glass_link">
-    <sensor name="ptz_camera_sensor" type="camera">
+    <sensor name="camera" type="camera">
       <always_on>true</always_on>
       <pose>0 0 0 0 0 0</pose>
       <visualize>true</visualize>
@@ -207,8 +217,8 @@
       <!-- Frame id used inside Gazebo messages -->
       <gz_frame_id>camera_link_optical</gz_frame_id>
 
-      <!-- Gazebo Transport topics to bridge with ros_gz_image / ros_gz_bridge -->
-      <topic>/ptz/camera/image_raw</topic>
+      <!-- Gazebo Transport topics to bridge with ros_gz_bridge -->
+      <topic>/ptz/camera/image_raw</topic>  <!-- topic that image gets published on -->
 
       <camera name="ptz_camera">
         <camera_info_topic>/ptz/camera/camera_info</camera_info_topic>
@@ -228,46 +238,187 @@
   </gazebo>
 
 
-  <!-- Joint position controller plugins for Ignition -->
+  <!-- Ignition Gazebo Plugins -->
   <gazebo>
+
+  <!-- CAMER SENSOR -->
     <plugin
         filename="ignition-gazebo-sensors-system"
         name="ignition::gazebo::systems::Sensors">
         <render_engine>ogre2</render_engine>
     </plugin>
 
-    <plugin
+    <!-- Joint position controller plugins for Ignition -->
+    <!-- Pan -->
+    <!-- <plugin
       filename="ignition-gazebo-joint-position-controller-system"
       name="ignition::gazebo::systems::JointPositionController">
       <joint_name>pan_joint</joint_name>
-      <!-- <topic>/cmd_pan</topic> -->
-      <p_gain>5.0</p_gain>
-      <i_gain>1.0</i_gain>
-      <d_gain>1.0</d_gain>
-      <initial_position>0.0</initial_position>
-    </plugin>
+      <p_gain>20.0</p_gain>
+      <i_gain>0.0</i_gain>
+      <d_gain>0.5</d_gain>
+    </plugin> -->
 
-    <plugin
+    <!-- Tilt -->
+    <!-- <plugin
       filename="ignition-gazebo-joint-position-controller-system"
       name="ignition::gazebo::systems::JointPositionController">
       <joint_name>tilt_joint</joint_name>
-      <!-- <topic>/cmd_tilt</topic> -->
-      <p_gain>5.0</p_gain>
+      <p_gain>20.0</p_gain>
       <i_gain>0.0</i_gain>
-      <d_gain>0.0</d_gain>
-      <initial_position>0.0</initial_position>
-    </plugin>
+      <d_gain>0.5</d_gain>
+    </plugin> -->
 
-    <plugin
+    <!-- Zoom -->
+    <!-- <plugin
       filename="ignition-gazebo-joint-position-controller-system"
       name="ignition::gazebo::systems::JointPositionController">
       <joint_name>zoom_joint</joint_name>
-      <!-- <topic>/cmd_zoom</topic> -->
-      <p_gain>10.0</p_gain>  <!-- higher P for prismatic if needed to overcome gravity -->
+      <p_gain>50.0</p_gain>
       <i_gain>0.0</i_gain>
-      <d_gain>0.0</d_gain>
-      <initial_position>0.0</initial_position>
+      <d_gain>1.0</d_gain>
+    </plugin> -->
+
+
+    <!-- Velocity controller plugins -->
+    <!-- default topic is: /model/my_robot/joint/pan_joint/cmd_vel -->
+    <!-- Pan velocity controller -->
+    <plugin
+      filename="ignition-gazebo-joint-controller-system"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>pan_joint</joint_name>
     </plugin>
+
+    <!-- Tilt velocity controller -->
+    <plugin
+      filename="ignition-gazebo-joint-controller-system"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>tilt_joint</joint_name>
+    </plugin>
+
+    <!-- Zoom velocity controller -->
+    <plugin
+      filename="ignition-gazebo-joint-controller-system"
+      name="ignition::gazebo::systems::JointController">
+      <joint_name>zoom_joint</joint_name>
+    </plugin>
+
+
+    <!-- KEYBOARD CONTROLS -->
+    <!-- STOP motion with 'S' key -->
+    <plugin
+      filename="ignition-gazebo-triggered-publisher-system"
+      name="ignition::gazebo::systems::TriggeredPublisher">
+      <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
+        <match field="data">83</match> <!-- 'S' -->
+      </input>
+      <output type="ignition.msgs.Double"
+          topic="/model/my_robot/joint/pan_joint/cmd_vel">
+        data: 0.0
+      </output>
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-triggered-publisher-system"
+      name="ignition::gazebo::systems::TriggeredPublisher">
+      <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
+        <match field="data">83</match> <!-- 'S' -->
+      </input>
+      <output type="ignition.msgs.Double"
+          topic="/model/my_robot/joint/tilt_joint/cmd_vel">
+        data: 0.0
+      </output>
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-triggered-publisher-system"
+      name="ignition::gazebo::systems::TriggeredPublisher">
+      <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
+        <match field="data">83</match> <!-- 'S' -->
+      </input>
+      <output type="ignition.msgs.Double"
+          topic="/model/my_robot/joint/zoom_joint/cmd_vel">
+        data: 0.0
+      </output>
+    </plugin>
+
+
+    <!-- Pan LEFT  with left arrow -->
+    <plugin
+      filename="ignition-gazebo-triggered-publisher-system"
+      name="ignition::gazebo::systems::TriggeredPublisher">
+      <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
+        <match field="data">16777234</match>  <!-- 16777234 = left arrow -->
+      </input>
+      <output type="ignition.msgs.Double"
+          topic="/model/my_robot/joint/pan_joint/cmd_vel">
+        data: 1.0
+      </output>
+    </plugin>
+
+    <!-- Pan RIGHT with right arrow -->
+    <plugin
+      filename="ignition-gazebo-triggered-publisher-system"
+      name="ignition::gazebo::systems::TriggeredPublisher">
+      <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
+        <match field="data">16777236</match>  <!-- 16777236 = right arrow -->
+      </input>
+      <output type="ignition.msgs.Double"
+          topic="/model/my_robot/joint/pan_joint/cmd_vel">
+        data: -1.0
+      </output>
+    </plugin>
+
+    <!-- Tilt UP with up arrow -->
+    <plugin
+      filename="ignition-gazebo-triggered-publisher-system"
+      name="ignition::gazebo::systems::TriggeredPublisher">
+      <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
+        <match field="data">16777235</match>  <!-- 16777235 = up arrow -->
+      </input>
+      <output type="ignition.msgs.Double"
+          topic="/model/my_robot/joint/tilt_joint/cmd_vel">
+        data: -0.5  <!-- look up a bit; negative for your joint if needed -->
+      </output>
+    </plugin>
+
+    <!-- Tilt DOWN with down arrow -->
+    <plugin
+      filename="ignition-gazebo-triggered-publisher-system"
+      name="ignition::gazebo::systems::TriggeredPublisher">
+      <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
+        <match field="data">16777237</match>  <!-- 16777237 = down arrow -->
+      </input>
+      <output type="ignition.msgs.Double"
+          topic="/model/my_robot/joint/tilt_joint/cmd_vel">
+        data: 0.5
+      </output>
+    </plugin>
+
+    <!-- Zoom IN with 'z' -->
+    <plugin
+      filename="ignition-gazebo-triggered-publisher-system"
+      name="ignition::gazebo::systems::TriggeredPublisher">
+      <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
+        <match field="data">90</match>  <!-- 'Z' keycode -->
+      </input>
+      <output type="ignition.msgs.Double"
+          topic="/model/my_robot/joint/zoom_joint/cmd_vel">
+        data: 0.10      <!-- max extension, within your [0.0, 0.1] limit -->
+      </output>
+    </plugin>
+
+    <!-- Zoom OUT with 'x' -->
+    <plugin
+      filename="ignition-gazebo-triggered-publisher-system"
+      name="ignition::gazebo::systems::TriggeredPublisher">
+      <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
+        <match field="data">88</match>  <!-- 'X' keycode -->
+      </input>
+      <output type="ignition.msgs.Double"
+          topic="/model/my_robot/joint/zoom_joint/cmd_vel">
+        data: -0.10
+      </output>
+    </plugin>
+
 
   </gazebo>
 

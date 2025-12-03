@@ -1,0 +1,693 @@
+[0.000000] (-) TimerEvent: {}
+[0.000233] (ptz_robot) JobQueued: {'identifier': 'ptz_robot', 'dependencies': OrderedDict()}
+[0.000256] (yolo_msgs) JobQueued: {'identifier': 'yolo_msgs', 'dependencies': OrderedDict()}
+[0.000270] (yolo_ros) JobQueued: {'identifier': 'yolo_ros', 'dependencies': OrderedDict([('yolo_msgs', '/home/omar/ptz_ws/install/yolo_msgs')])}
+[0.000279] (yolo_bringup) JobQueued: {'identifier': 'yolo_bringup', 'dependencies': OrderedDict([('yolo_msgs', '/home/omar/ptz_ws/install/yolo_msgs'), ('yolo_ros', '/home/omar/ptz_ws/install/yolo_ros')])}
+[0.000294] (yolo_msgs) JobStarted: {'identifier': 'yolo_msgs'}
+[0.002800] (ptz_robot) JobStarted: {'identifier': 'ptz_robot'}
+[0.005278] (yolo_msgs) JobProgress: {'identifier': 'yolo_msgs', 'progress': 'cmake'}
+[0.005777] (yolo_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/omar/ptz_ws/src/yolo_ros/yolo_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/omar/ptz_ws/install/yolo_msgs'], 'cwd': '/home/omar/ptz_ws/build/yolo_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'omar'), ('SSH_CLIENT', '10.211.55.2 52675 22'), ('ZED_ENVIRONMENT', 'worktree-shell'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/omar'), ('OLDPWD', '/home/omar/ptz_ws/src'), ('LIBGL_DRI3_DISABLE', '1'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/omar/ptz_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'omar'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/omar/.local/bin:/home/omar/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/omar/ptz_ws/build/yolo_msgs'), ('SSH_CONNECTION', '10.211.55.2 52675 10.211.55.5 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/omar/ptz_ws/build/ptz_robot:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble')]), 'shell': False}
+[0.071754] (yolo_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099575] (-) TimerEvent: {}
+[0.120979] (yolo_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.127574] (yolo_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.157311] (yolo_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.160334] (yolo_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.160824] (yolo_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.161652] (yolo_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.163609] (yolo_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.195046] (yolo_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.198239] (yolo_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.198375] (yolo_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.198601] (yolo_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.199803] (-) TimerEvent: {}
+[0.205809] (yolo_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.250409] (ptz_robot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/omar/ptz_ws/build/ptz_robot/build', '--no-deps', 'symlink_data'], 'cwd': '/home/omar/ptz_ws/build/ptz_robot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'omar', 'SSH_CLIENT': '10.211.55.2 52675 22', 'ZED_ENVIRONMENT': 'worktree-shell', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/omar', 'OLDPWD': '/home/omar/ptz_ws/src', 'LIBGL_DRI3_DISABLE': '1', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/omar/ptz_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'omar', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '8', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/omar/.local/bin:/home/omar/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/omar/ptz_ws/build/ptz_robot', 'SSH_CONNECTION': '10.211.55.2 52675 10.211.55.5 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/omar/ptz_ws/build/ptz_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:/home/omar/ptz_ws/build/ptz_robot:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.271527] (yolo_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.300117] (-) TimerEvent: {}
+[0.302158] (yolo_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.321793] (yolo_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.324999] (yolo_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.329915] (yolo_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.350543] (ptz_robot) StdoutLine: {'line': b'running develop\n'}
+[0.358326] (yolo_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.379958] (yolo_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.396034] (yolo_msgs) StdoutLine: {'line': b'-- Found geometry_msgs: 4.9.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.400717] (-) TimerEvent: {}
+[0.410701] (ptz_robot) StdoutLine: {'line': b'running egg_info\n'}
+[0.410798] (ptz_robot) StdoutLine: {'line': b'creating ptz_robot.egg-info\n'}
+[0.410909] (ptz_robot) StdoutLine: {'line': b'writing ptz_robot.egg-info/PKG-INFO\n'}
+[0.411062] (ptz_robot) StdoutLine: {'line': b'writing dependency_links to ptz_robot.egg-info/dependency_links.txt\n'}
+[0.411095] (ptz_robot) StdoutLine: {'line': b'writing entry points to ptz_robot.egg-info/entry_points.txt\n'}
+[0.411116] (ptz_robot) StdoutLine: {'line': b'writing requirements to ptz_robot.egg-info/requires.txt\n'}
+[0.411137] (ptz_robot) StdoutLine: {'line': b'writing top-level names to ptz_robot.egg-info/top_level.txt\n'}
+[0.411340] (ptz_robot) StdoutLine: {'line': b"writing manifest file 'ptz_robot.egg-info/SOURCES.txt'\n"}
+[0.411741] (ptz_robot) StdoutLine: {'line': b"reading manifest file 'ptz_robot.egg-info/SOURCES.txt'\n"}
+[0.411967] (ptz_robot) StdoutLine: {'line': b"writing manifest file 'ptz_robot.egg-info/SOURCES.txt'\n"}
+[0.412528] (ptz_robot) StdoutLine: {'line': b'running build_ext\n'}
+[0.412639] (ptz_robot) StdoutLine: {'line': b'Creating /home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages/ptz-robot.egg-link (link to .)\n'}
+[0.412908] (ptz_robot) StdoutLine: {'line': b'\n'}
+[0.412939] (ptz_robot) StdoutLine: {'line': b'Installed /home/omar/ptz_ws/build/ptz_robot\n'}
+[0.412961] (ptz_robot) StdoutLine: {'line': b'running symlink_data\n'}
+[0.413089] (ptz_robot) StdoutLine: {'line': b'creating /home/omar/ptz_ws/install/ptz_robot/share/ament_index\n'}
+[0.413221] (ptz_robot) StdoutLine: {'line': b'creating /home/omar/ptz_ws/install/ptz_robot/share/ament_index/resource_index\n'}
+[0.413245] (ptz_robot) StdoutLine: {'line': b'creating /home/omar/ptz_ws/install/ptz_robot/share/ament_index/resource_index/packages\n'}
+[0.413271] (ptz_robot) StdoutLine: {'line': b'symbolically linking /home/omar/ptz_ws/build/ptz_robot/resource/ptz_robot -> /home/omar/ptz_ws/install/ptz_robot/share/ament_index/resource_index/packages\n'}
+[0.413291] (ptz_robot) StdoutLine: {'line': b'symbolically linking /home/omar/ptz_ws/build/ptz_robot/package.xml -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot\n'}
+[0.413308] (ptz_robot) StdoutLine: {'line': b'creating /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/launch\n'}
+[0.413326] (ptz_robot) StdoutLine: {'line': b'symbolically linking /home/omar/ptz_ws/build/ptz_robot/launch/ptz.launch.py -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/launch\n'}
+[0.413344] (ptz_robot) StdoutLine: {'line': b'creating /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/urdf\n'}
+[0.413362] (ptz_robot) StdoutLine: {'line': b'symbolically linking /home/omar/ptz_ws/build/ptz_robot/urdf/ptz_robot.urdf.xacro -> /home/omar/ptz_ws/install/ptz_robot/share/ptz_robot/urdf\n'}
+[0.428499] (ptz_robot) CommandEnded: {'returncode': 0}
+[0.432767] (ptz_robot) JobEnded: {'identifier': 'ptz_robot', 'rc': 0}
+[0.501256] (-) TimerEvent: {}
+[0.550336] (yolo_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.601660] (-) TimerEvent: {}
+[0.652796] (yolo_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.702320] (-) TimerEvent: {}
+[0.786642] (yolo_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.795987] (yolo_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[0.798181] (yolo_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[0.802423] (-) TimerEvent: {}
+[0.812008] (yolo_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[0.812120] (yolo_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.812149] (yolo_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[0.812173] (yolo_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[0.820589] (yolo_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[0.851418] (yolo_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.870303] (yolo_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[0.874848] (yolo_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/omar/ptz_ws/build/yolo_msgs\n'}
+[0.878682] (yolo_msgs) CommandEnded: {'returncode': 0}
+[0.878852] (yolo_msgs) JobProgress: {'identifier': 'yolo_msgs', 'progress': 'build'}
+[0.878868] (yolo_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/omar/ptz_ws/build/yolo_msgs', '--', '-j8', '-l8'], 'cwd': '/home/omar/ptz_ws/build/yolo_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'omar'), ('SSH_CLIENT', '10.211.55.2 52675 22'), ('ZED_ENVIRONMENT', 'worktree-shell'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/omar'), ('OLDPWD', '/home/omar/ptz_ws/src'), ('LIBGL_DRI3_DISABLE', '1'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/omar/ptz_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'omar'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/omar/.local/bin:/home/omar/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/omar/ptz_ws/build/yolo_msgs'), ('SSH_CONNECTION', '10.211.55.2 52675 10.211.55.5 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/omar/ptz_ws/build/ptz_robot:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble')]), 'shell': False}
+[0.894351] (yolo_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[0.898005] (yolo_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[0.900085] (yolo_msgs) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_yolo_msgs\n'}
+[0.902711] (-) TimerEvent: {}
+[0.992450] (yolo_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.993014] (yolo_msgs) StdoutLine: {'line': b'creating yolo_msgs.egg-info\n'}
+[0.993125] (yolo_msgs) StdoutLine: {'line': b'writing yolo_msgs.egg-info/PKG-INFO\n'}
+[0.993295] (yolo_msgs) StdoutLine: {'line': b'writing dependency_links to yolo_msgs.egg-info/dependency_links.txt\n'}
+[0.993480] (yolo_msgs) StdoutLine: {'line': b'writing top-level names to yolo_msgs.egg-info/top_level.txt\n'}
+[0.993514] (yolo_msgs) StdoutLine: {'line': b"writing manifest file 'yolo_msgs.egg-info/SOURCES.txt'\n"}
+[0.994141] (yolo_msgs) StdoutLine: {'line': b"reading manifest file 'yolo_msgs.egg-info/SOURCES.txt'\n"}
+[0.994369] (yolo_msgs) StdoutLine: {'line': b"writing manifest file 'yolo_msgs.egg-info/SOURCES.txt'\n"}
+[1.002937] (-) TimerEvent: {}
+[1.007381] (yolo_msgs) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_build_yolo_msgs_egg\n'}
+[1.103236] (-) TimerEvent: {}
+[1.203742] (-) TimerEvent: {}
+[1.304046] (-) TimerEvent: {}
+[1.336678] (yolo_msgs) StdoutLine: {'line': b'[  1%] Built target yolo_msgs__cpp\n'}
+[1.340537] (yolo_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.340743] (yolo_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.343825] (yolo_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.350447] (yolo_msgs) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/point2_d__functions.c.o\x1b[0m\n'}
+[1.350679] (yolo_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/bounding_box2_d__functions.c.o\x1b[0m\n'}
+[1.350720] (yolo_msgs) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/vector2__functions.c.o\x1b[0m\n'}
+[1.350895] (yolo_msgs) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/pose2_d__functions.c.o\x1b[0m\n'}
+[1.354035] (yolo_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/bounding_box3_d__functions.c.o\x1b[0m\n'}
+[1.388140] (yolo_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/key_point2_d__functions.c.o\x1b[0m\n'}
+[1.388322] (yolo_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/mask__functions.c.o\x1b[0m\n'}
+[1.388417] (yolo_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/key_point3_d__functions.c.o\x1b[0m\n'}
+[1.388446] (yolo_msgs) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/key_point2_d_array__functions.c.o\x1b[0m\n'}
+[1.389800] (yolo_msgs) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/key_point3_d_array__functions.c.o\x1b[0m\n'}
+[1.404519] (-) TimerEvent: {}
+[1.408928] (yolo_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/srv/detail/set_classes__functions.c.o\x1b[0m\n'}
+[1.409037] (yolo_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/detection__functions.c.o\x1b[0m\n'}
+[1.409066] (yolo_msgs) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_c.dir/rosidl_generator_c/yolo_msgs/msg/detail/detection_array__functions.c.o\x1b[0m\n'}
+[1.433957] (yolo_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32m\x1b[1mLinking C shared library libyolo_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[1.450945] (yolo_msgs) StdoutLine: {'line': b'[ 14%] Built target yolo_msgs__rosidl_generator_c\n'}
+[1.454927] (yolo_msgs) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.455057] (yolo_msgs) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.455184] (yolo_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[1.505397] (-) TimerEvent: {}
+[1.605714] (-) TimerEvent: {}
+[1.641065] (yolo_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/point2_d__type_support.cpp.o\x1b[0m\n'}
+[1.642651] (yolo_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/vector2__type_support.cpp.o\x1b[0m\n'}
+[1.642713] (yolo_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/pose2_d__type_support.cpp.o\x1b[0m\n'}
+[1.705931] (-) TimerEvent: {}
+[1.752056] (yolo_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/point2_d__type_support.cpp.o\x1b[0m\n'}
+[1.773094] (yolo_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/bounding_box2_d__type_support.cpp.o\x1b[0m\n'}
+[1.773365] (yolo_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/vector2__type_support.cpp.o\x1b[0m\n'}
+[1.779976] (yolo_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/point2_d__type_support.cpp.o\x1b[0m\n'}
+[1.789552] (yolo_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/bounding_box3_d__type_support.cpp.o\x1b[0m\n'}
+[1.798242] (yolo_msgs) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/vector2__type_support.cpp.o\x1b[0m\n'}
+[1.806137] (-) TimerEvent: {}
+[1.812521] (yolo_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/point2_d__type_support.cpp.o\x1b[0m\n'}
+[1.817141] (yolo_msgs) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/pose2_d__type_support.cpp.o\x1b[0m\n'}
+[1.830516] (yolo_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/bounding_box2_d__type_support.cpp.o\x1b[0m\n'}
+[1.843225] (yolo_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/bounding_box3_d__type_support.cpp.o\x1b[0m\n'}
+[1.860074] (yolo_msgs) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/mask__type_support.cpp.o\x1b[0m\n'}
+[1.873116] (yolo_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/mask__type_support.cpp.o\x1b[0m\n'}
+[1.873376] (yolo_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/key_point2_d__type_support.cpp.o\x1b[0m\n'}
+[1.879651] (yolo_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/point2_d__type_support.c.o\x1b[0m\n'}
+[1.886420] (yolo_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/key_point2_d_array__type_support.cpp.o\x1b[0m\n'}
+[1.894489] (yolo_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/vector2__type_support.c.o\x1b[0m\n'}
+[1.899955] (yolo_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/key_point3_d__type_support.cpp.o\x1b[0m\n'}
+[1.900069] (yolo_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/point2_d__type_support_c.cpp.o\x1b[0m\n'}
+[1.906307] (-) TimerEvent: {}
+[1.909170] (yolo_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/pose2_d__type_support.c.o\x1b[0m\n'}
+[1.919879] (yolo_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/pose2_d__type_support.cpp.o\x1b[0m\n'}
+[1.919991] (yolo_msgs) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/bounding_box2_d__type_support.cpp.o\x1b[0m\n'}
+[1.925205] (yolo_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/key_point3_d_array__type_support.cpp.o\x1b[0m\n'}
+[1.935395] (yolo_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/key_point2_d__type_support.cpp.o\x1b[0m\n'}
+[1.938422] (yolo_msgs) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/detection__type_support.cpp.o\x1b[0m\n'}
+[1.952394] (yolo_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/msg/detection_array__type_support.cpp.o\x1b[0m\n'}
+[1.957073] (yolo_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/bounding_box2_d__type_support.c.o\x1b[0m\n'}
+[1.975164] (yolo_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/key_point2_d_array__type_support.cpp.o\x1b[0m\n'}
+[1.980305] (yolo_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msgs/srv/set_classes__type_support.cpp.o\x1b[0m\n'}
+[1.980407] (yolo_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/bounding_box3_d__type_support.c.o\x1b[0m\n'}
+[1.995486] (yolo_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/mask__type_support.c.o\x1b[0m\n'}
+[2.006530] (-) TimerEvent: {}
+[2.007570] (yolo_msgs) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.008825] (yolo_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/vector2__type_support.cpp.o\x1b[0m\n'}
+[2.014224] (yolo_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/key_point2_d__type_support.c.o\x1b[0m\n'}
+[2.026092] (yolo_msgs) StdoutLine: {'line': b'[ 47%] Built target yolo_msgs__rosidl_typesupport_c\n'}
+[2.028927] (yolo_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/key_point2_d_array__type_support.c.o\x1b[0m\n'}
+[2.029069] (yolo_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/pose2_d__type_support.cpp.o\x1b[0m\n'}
+[2.029691] (yolo_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/vector2__type_support_c.cpp.o\x1b[0m\n'}
+[2.045080] (yolo_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/key_point3_d__type_support.c.o\x1b[0m\n'}
+[2.045887] (yolo_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/key_point3_d__type_support.cpp.o\x1b[0m\n'}
+[2.060787] (yolo_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/bounding_box3_d__type_support.cpp.o\x1b[0m\n'}
+[2.061790] (yolo_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/key_point3_d_array__type_support.c.o\x1b[0m\n'}
+[2.061879] (yolo_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/mask__type_support.cpp.o\x1b[0m\n'}
+[2.077705] (yolo_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/detection__type_support.c.o\x1b[0m\n'}
+[2.087772] (yolo_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/key_point3_d_array__type_support.cpp.o\x1b[0m\n'}
+[2.106840] (-) TimerEvent: {}
+[2.114259] (yolo_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/msg/detail/detection_array__type_support.c.o\x1b[0m\n'}
+[2.138310] (yolo_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msgs/srv/detail/set_classes__type_support.c.o\x1b[0m\n'}
+[2.148037] (yolo_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/detection__type_support.cpp.o\x1b[0m\n'}
+[2.153443] (yolo_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/pose2_d__type_support_c.cpp.o\x1b[0m\n'}
+[2.167551] (yolo_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/bounding_box2_d__type_support.cpp.o\x1b[0m\n'}
+[2.168915] (yolo_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking C shared library libyolo_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.185849] (yolo_msgs) StdoutLine: {'line': b'[ 58%] Built target yolo_msgs__rosidl_typesupport_introspection_c\n'}
+[2.186074] (yolo_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/bounding_box3_d__type_support.cpp.o\x1b[0m\n'}
+[2.190072] (yolo_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/mask__type_support.cpp.o\x1b[0m\n'}
+[2.202621] (yolo_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/msg/detection_array__type_support.cpp.o\x1b[0m\n'}
+[2.207095] (-) TimerEvent: {}
+[2.215424] (yolo_msgs) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/key_point2_d__type_support.cpp.o\x1b[0m\n'}
+[2.222610] (yolo_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/key_point2_d_array__type_support.cpp.o\x1b[0m\n'}
+[2.252852] (yolo_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msgs/srv/set_classes__type_support.cpp.o\x1b[0m\n'}
+[2.287236] (yolo_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/bounding_box2_d__type_support_c.cpp.o\x1b[0m\n'}
+[2.307220] (-) TimerEvent: {}
+[2.327153] (yolo_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/bounding_box3_d__type_support_c.cpp.o\x1b[0m\n'}
+[2.339136] (yolo_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/key_point2_d__type_support.cpp.o\x1b[0m\n'}
+[2.352326] (yolo_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/key_point2_d_array__type_support.cpp.o\x1b[0m\n'}
+[2.352710] (yolo_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.356460] (yolo_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/key_point3_d__type_support.cpp.o\x1b[0m\n'}
+[2.358370] (yolo_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/key_point3_d__type_support.cpp.o\x1b[0m\n'}
+[2.376658] (yolo_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/key_point3_d_array__type_support.cpp.o\x1b[0m\n'}
+[2.387322] (yolo_msgs) StdoutLine: {'line': b'[ 69%] Built target yolo_msgs__rosidl_typesupport_cpp\n'}
+[2.390487] (yolo_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/detection__type_support.cpp.o\x1b[0m\n'}
+[2.407372] (-) TimerEvent: {}
+[2.415360] (yolo_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/mask__type_support_c.cpp.o\x1b[0m\n'}
+[2.462320] (yolo_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/key_point2_d__type_support_c.cpp.o\x1b[0m\n'}
+[2.491191] (yolo_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/key_point3_d_array__type_support.cpp.o\x1b[0m\n'}
+[2.495265] (yolo_msgs) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/msg/detail/detection_array__type_support.cpp.o\x1b[0m\n'}
+[2.507500] (-) TimerEvent: {}
+[2.509146] (yolo_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/detection__type_support.cpp.o\x1b[0m\n'}
+[2.533675] (yolo_msgs) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msgs/srv/detail/set_classes__type_support.cpp.o\x1b[0m\n'}
+[2.546610] (yolo_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/msg/detail/dds_fastrtps/detection_array__type_support.cpp.o\x1b[0m\n'}
+[2.549797] (yolo_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/key_point2_d_array__type_support_c.cpp.o\x1b[0m\n'}
+[2.582273] (yolo_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msgs/srv/detail/dds_fastrtps/set_classes__type_support.cpp.o\x1b[0m\n'}
+[2.586816] (yolo_msgs) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/key_point3_d__type_support_c.cpp.o\x1b[0m\n'}
+[2.607655] (-) TimerEvent: {}
+[2.660448] (yolo_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/key_point3_d_array__type_support_c.cpp.o\x1b[0m\n'}
+[2.674598] (yolo_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/detection__type_support_c.cpp.o\x1b[0m\n'}
+[2.682939] (yolo_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/msg/detail/detection_array__type_support_c.cpp.o\x1b[0m\n'}
+[2.695343] (yolo_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msgs/srv/detail/set_classes__type_support_c.cpp.o\x1b[0m\n'}
+[2.704719] (yolo_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.709556] (-) TimerEvent: {}
+[2.748225] (yolo_msgs) StdoutLine: {'line': b'[ 83%] Built target yolo_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.758543] (yolo_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.795705] (yolo_msgs) StdoutLine: {'line': b'[ 83%] Built target yolo_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.810347] (-) TimerEvent: {}
+[2.834825] (yolo_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.862806] (yolo_msgs) StdoutLine: {'line': b'[ 84%] Built target yolo_msgs__rosidl_typesupport_fastrtps_c\n'}
+[2.868986] (yolo_msgs) StdoutLine: {'line': b'[ 84%] Built target yolo_msgs\n'}
+[2.875395] (yolo_msgs) StdoutLine: {'line': b'[ 85%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.910426] (-) TimerEvent: {}
+[3.010926] (-) TimerEvent: {}
+[3.111370] (-) TimerEvent: {}
+[3.211886] (-) TimerEvent: {}
+[3.312631] (-) TimerEvent: {}
+[3.413074] (-) TimerEvent: {}
+[3.514178] (-) TimerEvent: {}
+[3.566510] (yolo_msgs) StdoutLine: {'line': b'[ 85%] Built target yolo_msgs__py\n'}
+[3.573626] (yolo_msgs) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_point2_d_s.c.o\x1b[0m\n'}
+[3.573745] (yolo_msgs) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_vector2_s.c.o\x1b[0m\n'}
+[3.578170] (yolo_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_pose2_d_s.c.o\x1b[0m\n'}
+[3.578276] (yolo_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_bounding_box2_d_s.c.o\x1b[0m\n'}
+[3.578316] (yolo_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_bounding_box3_d_s.c.o\x1b[0m\n'}
+[3.578339] (yolo_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_mask_s.c.o\x1b[0m\n'}
+[3.578360] (yolo_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_key_point2_d_array_s.c.o\x1b[0m\n'}
+[3.578381] (yolo_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_key_point2_d_s.c.o\x1b[0m\n'}
+[3.614361] (-) TimerEvent: {}
+[3.642215] (yolo_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_detection_array_s.c.o\x1b[0m\n'}
+[3.642346] (yolo_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_key_point3_d_array_s.c.o\x1b[0m\n'}
+[3.642393] (yolo_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_key_point3_d_s.c.o\x1b[0m\n'}
+[3.642432] (yolo_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/msg/_detection_s.c.o\x1b[0m\n'}
+[3.642557] (yolo_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_generator_py.dir/rosidl_generator_py/yolo_msgs/srv/_set_classes_s.c.o\x1b[0m\n'}
+[3.689866] (yolo_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/yolo_msgs/libyolo_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[3.705377] (yolo_msgs) StdoutLine: {'line': b'[ 96%] Built target yolo_msgs__rosidl_generator_py\n'}
+[3.712469] (yolo_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/yolo_msgs/_yolo_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.712558] (yolo_msgs) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/yolo_msgs/_yolo_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.712587] (yolo_msgs) StdoutLine: {'line': b'[ 99%] \x1b[32mBuilding C object CMakeFiles/yolo_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/yolo_msgs/_yolo_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.714515] (-) TimerEvent: {}
+[3.766160] (yolo_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/yolo_msgs/yolo_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[3.766288] (yolo_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/yolo_msgs/yolo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[3.766324] (yolo_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/yolo_msgs/yolo_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[3.780979] (yolo_msgs) StdoutLine: {'line': b'[100%] Built target yolo_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.781127] (yolo_msgs) StdoutLine: {'line': b'[100%] Built target yolo_msgs__rosidl_typesupport_c__pyext\n'}
+[3.781151] (yolo_msgs) StdoutLine: {'line': b'[100%] Built target yolo_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[3.785139] (yolo_msgs) CommandEnded: {'returncode': 0}
+[3.785656] (yolo_msgs) JobProgress: {'identifier': 'yolo_msgs', 'progress': 'install'}
+[3.788557] (yolo_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/omar/ptz_ws/build/yolo_msgs'], 'cwd': '/home/omar/ptz_ws/build/yolo_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'omar'), ('SSH_CLIENT', '10.211.55.2 52675 22'), ('ZED_ENVIRONMENT', 'worktree-shell'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/omar'), ('OLDPWD', '/home/omar/ptz_ws/src'), ('LIBGL_DRI3_DISABLE', '1'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/omar/ptz_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'omar'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/omar/.local/bin:/home/omar/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/omar/ptz_ws/build/yolo_msgs'), ('SSH_CONNECTION', '10.211.55.2 52675 10.211.55.5 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/omar/ptz_ws/build/ptz_robot:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble')]), 'shell': False}
+[3.790459] (yolo_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.790758] (yolo_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.790887] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/ament_index/resource_index/rosidl_interfaces/yolo_msgs\n'}
+[3.793706] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/bounding_box2_d.h\n'}
+[3.796204] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/bounding_box3_d.h\n'}
+[3.798812] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__functions.h\n'}
+[3.802034] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__struct.h\n'}
+[3.804586] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__type_support.h\n'}
+[3.807269] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__functions.h\n'}
+[3.809963] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__struct.h\n'}
+[3.812476] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__type_support.h\n'}
+[3.814622] (-) TimerEvent: {}
+[3.814995] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__functions.h\n'}
+[3.817546] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__struct.h\n'}
+[3.820012] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__type_support.h\n'}
+[3.822679] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__functions.h\n'}
+[3.825428] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__struct.h\n'}
+[3.828581] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__type_support.h\n'}
+[3.831330] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__functions.h\n'}
+[3.834086] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__struct.h\n'}
+[3.836548] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__type_support.h\n'}
+[3.839210] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__functions.h\n'}
+[3.841871] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__struct.h\n'}
+[3.844331] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__type_support.h\n'}
+[3.846997] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__functions.h\n'}
+[3.849602] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__struct.h\n'}
+[3.852154] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__type_support.h\n'}
+[3.854768] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__functions.h\n'}
+[3.857314] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__struct.h\n'}
+[3.859817] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__type_support.h\n'}
+[3.862452] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__functions.h\n'}
+[3.864997] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__struct.h\n'}
+[3.867576] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__type_support.h\n'}
+[3.870121] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__functions.h\n'}
+[3.872619] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__struct.h\n'}
+[3.875086] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__type_support.h\n'}
+[3.877297] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__functions.h\n'}
+[3.879550] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__struct.h\n'}
+[3.881846] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__type_support.h\n'}
+[3.884159] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__functions.h\n'}
+[3.886511] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__struct.h\n'}
+[3.888856] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__type_support.h\n'}
+[3.891298] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detection.h\n'}
+[3.893739] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detection_array.h\n'}
+[3.896171] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/key_point2_d.h\n'}
+[3.898673] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/key_point2_d_array.h\n'}
+[3.901019] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/key_point3_d.h\n'}
+[3.903535] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/key_point3_d_array.h\n'}
+[3.906140] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/mask.h\n'}
+[3.908568] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/point2_d.h\n'}
+[3.911469] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/pose2_d.h\n'}
+[3.914283] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.914793] (-) TimerEvent: {}
+[3.916942] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/vector2.h\n'}
+[3.919578] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__functions.h\n'}
+[3.922311] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__struct.h\n'}
+[3.924894] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__type_support.h\n'}
+[3.927933] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/set_classes.h\n'}
+[3.930687] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/environment/library_path.sh\n'}
+[3.933286] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/environment/library_path.dsv\n'}
+[3.936301] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__rosidl_typesupport_fastrtps_c.h\n'}
+[3.939280] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_c.h\n'}
+[3.941973] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__rosidl_typesupport_fastrtps_c.h\n'}
+[3.944447] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__rosidl_typesupport_fastrtps_c.h\n'}
+[3.946963] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__rosidl_typesupport_fastrtps_c.h\n'}
+[3.949221] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__rosidl_typesupport_fastrtps_c.h\n'}
+[3.951523] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__rosidl_typesupport_fastrtps_c.h\n'}
+[3.953853] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__rosidl_typesupport_fastrtps_c.h\n'}
+[3.956013] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__rosidl_typesupport_fastrtps_c.h\n'}
+[3.958368] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__rosidl_typesupport_fastrtps_c.h\n'}
+[3.960716] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__rosidl_typesupport_fastrtps_c.h\n'}
+[3.963103] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__rosidl_typesupport_fastrtps_c.h\n'}
+[3.965410] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.967891] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__rosidl_typesupport_fastrtps_c.h\n'}
+[3.970665] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__rosidl_typesupport_introspection_c.h\n'}
+[3.973115] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_c.h\n'}
+[3.975623] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__rosidl_typesupport_introspection_c.h\n'}
+[3.978198] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__rosidl_typesupport_introspection_c.h\n'}
+[3.980537] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__rosidl_typesupport_introspection_c.h\n'}
+[3.982968] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__rosidl_typesupport_introspection_c.h\n'}
+[3.985355] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__rosidl_typesupport_introspection_c.h\n'}
+[3.987798] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__rosidl_typesupport_introspection_c.h\n'}
+[3.990326] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__rosidl_typesupport_introspection_c.h\n'}
+[3.992766] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__rosidl_typesupport_introspection_c.h\n'}
+[3.995477] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__rosidl_typesupport_introspection_c.h\n'}
+[3.997960] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__rosidl_typesupport_introspection_c.h\n'}
+[4.000391] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.002946] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__rosidl_typesupport_introspection_c.h\n'}
+[4.005712] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/bounding_box2_d.hpp\n'}
+[4.008356] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/bounding_box3_d.hpp\n'}
+[4.010845] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__builder.hpp\n'}
+[4.013322] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__struct.hpp\n'}
+[4.015140] (-) TimerEvent: {}
+[4.016663] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__traits.hpp\n'}
+[4.019359] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__type_support.hpp\n'}
+[4.021947] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__builder.hpp\n'}
+[4.024496] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__struct.hpp\n'}
+[4.027169] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__traits.hpp\n'}
+[4.029670] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__type_support.hpp\n'}
+[4.032177] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__builder.hpp\n'}
+[4.034807] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__struct.hpp\n'}
+[4.037369] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__traits.hpp\n'}
+[4.039888] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__type_support.hpp\n'}
+[4.042644] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__builder.hpp\n'}
+[4.045144] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__struct.hpp\n'}
+[4.047656] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__traits.hpp\n'}
+[4.050214] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__type_support.hpp\n'}
+[4.052849] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__builder.hpp\n'}
+[4.055302] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__struct.hpp\n'}
+[4.057726] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__traits.hpp\n'}
+[4.060096] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__type_support.hpp\n'}
+[4.062798] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__builder.hpp\n'}
+[4.065280] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__struct.hpp\n'}
+[4.067748] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__traits.hpp\n'}
+[4.070476] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__type_support.hpp\n'}
+[4.072979] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__builder.hpp\n'}
+[4.075515] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__struct.hpp\n'}
+[4.078016] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__traits.hpp\n'}
+[4.080663] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__type_support.hpp\n'}
+[4.083184] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__builder.hpp\n'}
+[4.085699] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__struct.hpp\n'}
+[4.088137] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__traits.hpp\n'}
+[4.090765] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__type_support.hpp\n'}
+[4.093290] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__builder.hpp\n'}
+[4.095846] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__struct.hpp\n'}
+[4.098396] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__traits.hpp\n'}
+[4.100956] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__type_support.hpp\n'}
+[4.103659] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__builder.hpp\n'}
+[4.106438] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__struct.hpp\n'}
+[4.108969] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__traits.hpp\n'}
+[4.111563] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__type_support.hpp\n'}
+[4.114412] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__builder.hpp\n'}
+[4.115409] (-) TimerEvent: {}
+[4.117043] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__struct.hpp\n'}
+[4.119565] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__traits.hpp\n'}
+[4.122305] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__type_support.hpp\n'}
+[4.124913] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__builder.hpp\n'}
+[4.127431] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__struct.hpp\n'}
+[4.129902] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__traits.hpp\n'}
+[4.132335] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__type_support.hpp\n'}
+[4.134968] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detection.hpp\n'}
+[4.137368] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detection_array.hpp\n'}
+[4.139830] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/key_point2_d.hpp\n'}
+[4.142406] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/key_point2_d_array.hpp\n'}
+[4.144914] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/key_point3_d.hpp\n'}
+[4.147412] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/key_point3_d_array.hpp\n'}
+[4.149992] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/mask.hpp\n'}
+[4.152772] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/point2_d.hpp\n'}
+[4.155477] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/pose2_d.hpp\n'}
+[4.158009] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[4.160398] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/vector2.hpp\n'}
+[4.162991] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__builder.hpp\n'}
+[4.165426] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__struct.hpp\n'}
+[4.167906] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__traits.hpp\n'}
+[4.170721] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__type_support.hpp\n'}
+[4.173181] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/set_classes.hpp\n'}
+[4.175991] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.178520] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.181192] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.183817] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.186441] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.188827] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.191352] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.193905] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.196472] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.198966] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.201488] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.204200] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.206772] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.209259] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.212082] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box2_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.214507] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/bounding_box3_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.215735] (-) TimerEvent: {}
+[4.216956] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.219590] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/detection_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.222062] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.224534] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point2_d_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.227386] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.230048] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/key_point3_d_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.232825] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/mask__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.235668] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/point2_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.238207] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/pose2_d__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.240614] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/msg/detail/vector2__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.243399] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/include/yolo_msgs/yolo_msgs/srv/detail/set_classes__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.246062] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/environment/pythonpath.sh\n'}
+[4.248574] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/environment/pythonpath.dsv\n'}
+[4.251268] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs-4.3.1-py3.10.egg-info/PKG-INFO\n'}
+[4.253774] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs-4.3.1-py3.10.egg-info/SOURCES.txt\n'}
+[4.256433] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs-4.3.1-py3.10.egg-info/dependency_links.txt\n'}
+[4.259009] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs-4.3.1-py3.10.egg-info/top_level.txt\n'}
+[4.261898] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/__init__.py\n'}
+[4.264606] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/_yolo_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[4.267178] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/_yolo_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.269914] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/_yolo_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.272512] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/libyolo_msgs__rosidl_generator_py.so\n'}
+[4.275029] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/__init__.py\n'}
+[4.277474] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_bounding_box2_d.py\n'}
+[4.280181] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_bounding_box2_d_s.c\n'}
+[4.282695] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_bounding_box3_d.py\n'}
+[4.285190] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_bounding_box3_d_s.c\n'}
+[4.287733] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_detection.py\n'}
+[4.290334] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_detection_array.py\n'}
+[4.292841] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_detection_array_s.c\n'}
+[4.295707] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_detection_s.c\n'}
+[4.298438] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point2_d.py\n'}
+[4.300909] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point2_d_array.py\n'}
+[4.303345] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point2_d_array_s.c\n'}
+[4.305799] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point2_d_s.c\n'}
+[4.308237] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point3_d.py\n'}
+[4.311017] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point3_d_array.py\n'}
+[4.313576] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point3_d_array_s.c\n'}
+[4.316042] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point3_d_s.c\n'}
+[4.316090] (-) TimerEvent: {}
+[4.318699] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_mask.py\n'}
+[4.321268] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_mask_s.c\n'}
+[4.323921] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_point2_d.py\n'}
+[4.326477] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_point2_d_s.c\n'}
+[4.329039] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_pose2_d.py\n'}
+[4.331764] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_pose2_d_s.c\n'}
+[4.334477] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_vector2.py\n'}
+[4.336989] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_vector2_s.c\n'}
+[4.339602] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/srv/__init__.py\n'}
+[4.342104] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/srv/_set_classes.py\n'}
+[4.344742] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/srv/_set_classes_s.c\n'}
+[4.347232] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/yolo_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.349721] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/yolo_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.352207] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/yolo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.354903] (yolo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/yolo_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.354996] (yolo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/yolo_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.355078] (yolo_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/yolo_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.355149] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Point2D.idl\n'}
+[4.357639] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Vector2.idl\n'}
+[4.360032] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Pose2D.idl\n'}
+[4.362609] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/BoundingBox2D.idl\n'}
+[4.365001] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/BoundingBox3D.idl\n'}
+[4.367638] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Mask.idl\n'}
+[4.370173] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/KeyPoint2D.idl\n'}
+[4.372668] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/KeyPoint2DArray.idl\n'}
+[4.375223] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/KeyPoint3D.idl\n'}
+[4.377694] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/KeyPoint3DArray.idl\n'}
+[4.380418] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Detection.idl\n'}
+[4.382945] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/DetectionArray.idl\n'}
+[4.385494] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/srv/SetClasses.idl\n'}
+[4.388082] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Point2D.msg\n'}
+[4.390765] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Vector2.msg\n'}
+[4.393178] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Pose2D.msg\n'}
+[4.396038] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/BoundingBox2D.msg\n'}
+[4.398882] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/BoundingBox3D.msg\n'}
+[4.401349] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Mask.msg\n'}
+[4.404048] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/KeyPoint2D.msg\n'}
+[4.406448] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/KeyPoint2DArray.msg\n'}
+[4.408904] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/KeyPoint3D.msg\n'}
+[4.411580] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/KeyPoint3DArray.msg\n'}
+[4.414446] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/Detection.msg\n'}
+[4.416598] (-) TimerEvent: {}
+[4.417014] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/msg/DetectionArray.msg\n'}
+[4.419578] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/srv/SetClasses.srv\n'}
+[4.422226] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/srv/SetClasses_Request.msg\n'}
+[4.424814] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/srv/SetClasses_Response.msg\n'}
+[4.427361] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/ament_index/resource_index/package_run_dependencies/yolo_msgs\n'}
+[4.430060] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/ament_index/resource_index/parent_prefix_path/yolo_msgs\n'}
+[4.432667] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/environment/ament_prefix_path.sh\n'}
+[4.435290] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/environment/ament_prefix_path.dsv\n'}
+[4.437965] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/environment/path.sh\n'}
+[4.440481] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/environment/path.dsv\n'}
+[4.443182] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/local_setup.bash\n'}
+[4.446395] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/local_setup.sh\n'}
+[4.449145] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/local_setup.zsh\n'}
+[4.451689] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/local_setup.dsv\n'}
+[4.454491] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/package.dsv\n'}
+[4.456987] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/ament_index/resource_index/packages/yolo_msgs\n'}
+[4.459563] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[4.462125] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.464614] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.467298] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.469851] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.472346] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.474943] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.477411] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgsConfig.cmake\n'}
+[4.480100] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgsConfig-version.cmake\n'}
+[4.482525] (yolo_msgs) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/package.xml\n'}
+[4.485029] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_generator_c.so\n'}
+[4.485208] (yolo_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_generator_c.so" to ""\n'}
+[4.485245] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[4.485401] (yolo_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.485437] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_introspection_c.so\n'}
+[4.485710] (yolo_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.485755] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_c.so\n'}
+[4.485802] (yolo_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_c.so" to ""\n'}
+[4.485823] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.486009] (yolo_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.486046] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[4.486300] (yolo_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.486332] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_cpp.so\n'}
+[4.486465] (yolo_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[4.504025] (yolo_msgs) StdoutLine: {'line': b"Listing '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs'...\n"}
+[4.504071] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/__init__.py'...\n"}
+[4.504092] (yolo_msgs) StdoutLine: {'line': b"Listing '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg'...\n"}
+[4.504112] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/__init__.py'...\n"}
+[4.504132] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_bounding_box2_d.py'...\n"}
+[4.504152] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_bounding_box3_d.py'...\n"}
+[4.504172] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_detection.py'...\n"}
+[4.504191] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_detection_array.py'...\n"}
+[4.504211] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point2_d.py'...\n"}
+[4.504235] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point2_d_array.py'...\n"}
+[4.504255] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point3_d.py'...\n"}
+[4.504275] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_key_point3_d_array.py'...\n"}
+[4.504295] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_mask.py'...\n"}
+[4.504316] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_point2_d.py'...\n"}
+[4.504336] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_pose2_d.py'...\n"}
+[4.504356] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/msg/_vector2.py'...\n"}
+[4.504376] (yolo_msgs) StdoutLine: {'line': b"Listing '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/srv'...\n"}
+[4.504395] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/srv/__init__.py'...\n"}
+[4.504414] (yolo_msgs) StdoutLine: {'line': b"Compiling '/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages/yolo_msgs/srv/_set_classes.py'...\n"}
+[4.506316] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_generator_py.so\n'}
+[4.506499] (yolo_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/omar/ptz_ws/install/yolo_msgs/lib/libyolo_msgs__rosidl_generator_py.so" to ""\n'}
+[4.506638] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/export_yolo_msgs__rosidl_generator_cExport.cmake\n'}
+[4.506713] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/export_yolo_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.506740] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/export_yolo_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.506793] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/export_yolo_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.506895] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.506977] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.507002] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgs__rosidl_typesupport_cExport.cmake\n'}
+[4.507060] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.507153] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/export_yolo_msgs__rosidl_generator_cppExport.cmake\n'}
+[4.507191] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/export_yolo_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.507275] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/export_yolo_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.507307] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.507398] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.507433] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[4.507517] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/yolo_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.507557] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/export_yolo_msgs__rosidl_generator_pyExport.cmake\n'}
+[4.507609] (yolo_msgs) StdoutLine: {'line': b'-- Installing: /home/omar/ptz_ws/install/yolo_msgs/share/yolo_msgs/cmake/export_yolo_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.508855] (yolo_msgs) CommandEnded: {'returncode': 0}
+[4.515572] (yolo_msgs) JobEnded: {'identifier': 'yolo_msgs', 'rc': 0}
+[4.515730] (yolo_ros) JobStarted: {'identifier': 'yolo_ros'}
+[4.517081] (-) TimerEvent: {}
+[4.618146] (-) TimerEvent: {}
+[4.718485] (-) TimerEvent: {}
+[4.761550] (yolo_ros) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/omar/ptz_ws/build/yolo_ros/build', '--no-deps', 'symlink_data'], 'cwd': '/home/omar/ptz_ws/build/yolo_ros', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'omar', 'SSH_CLIENT': '10.211.55.2 52675 22', 'ZED_ENVIRONMENT': 'worktree-shell', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/omar/ptz_ws/install/yolo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'MOTD_SHOWN': 'pam', 'HOME': '/home/omar', 'OLDPWD': '/home/omar/ptz_ws/src', 'LIBGL_DRI3_DISABLE': '1', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLCON_PREFIX_PATH': '/home/omar/ptz_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'omar', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '8', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/omar/.local/bin:/home/omar/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000', 'LANG': 'en_US.UTF-8', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/home/omar/ptz_ws/install/yolo_msgs:/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/omar/ptz_ws/build/yolo_ros', 'SSH_CONNECTION': '10.211.55.2 52675 10.211.55.5 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/omar/ptz_ws/build/yolo_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/omar/ptz_ws/install/yolo_ros/lib/python3.10/site-packages:/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages:/home/omar/ptz_ws/build/ptz_robot:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/omar/ptz_ws/install/yolo_msgs'}, 'shell': False}
+[4.818736] (-) TimerEvent: {}
+[4.859170] (yolo_ros) StdoutLine: {'line': b'running develop\n'}
+[4.918629] (yolo_ros) StdoutLine: {'line': b'running egg_info\n'}
+[4.918787] (-) TimerEvent: {}
+[4.918851] (yolo_ros) StdoutLine: {'line': b'creating yolo_ros.egg-info\n'}
+[4.918889] (yolo_ros) StdoutLine: {'line': b'writing yolo_ros.egg-info/PKG-INFO\n'}
+[4.919033] (yolo_ros) StdoutLine: {'line': b'writing dependency_links to yolo_ros.egg-info/dependency_links.txt\n'}
+[4.919121] (yolo_ros) StdoutLine: {'line': b'writing entry points to yolo_ros.egg-info/entry_points.txt\n'}
+[4.919205] (yolo_ros) StdoutLine: {'line': b'writing requirements to yolo_ros.egg-info/requires.txt\n'}
+[4.919230] (yolo_ros) StdoutLine: {'line': b'writing top-level names to yolo_ros.egg-info/top_level.txt\n'}
+[4.919251] (yolo_ros) StdoutLine: {'line': b"writing manifest file 'yolo_ros.egg-info/SOURCES.txt'\n"}
+[4.919741] (yolo_ros) StdoutLine: {'line': b"reading manifest file 'yolo_ros.egg-info/SOURCES.txt'\n"}
+[4.919967] (yolo_ros) StdoutLine: {'line': b"writing manifest file 'yolo_ros.egg-info/SOURCES.txt'\n"}
+[4.920532] (yolo_ros) StdoutLine: {'line': b'running build_ext\n'}
+[4.920639] (yolo_ros) StdoutLine: {'line': b'Creating /home/omar/ptz_ws/install/yolo_ros/lib/python3.10/site-packages/yolo-ros.egg-link (link to .)\n'}
+[4.920954] (yolo_ros) StdoutLine: {'line': b'Installing debug_node script to /home/omar/ptz_ws/install/yolo_ros/lib/yolo_ros\n'}
+[4.921042] (yolo_ros) StdoutLine: {'line': b'Installing detect_3d_node script to /home/omar/ptz_ws/install/yolo_ros/lib/yolo_ros\n'}
+[4.921080] (yolo_ros) StdoutLine: {'line': b'Installing tracking_node script to /home/omar/ptz_ws/install/yolo_ros/lib/yolo_ros\n'}
+[4.921174] (yolo_ros) StdoutLine: {'line': b'Installing yolo_node script to /home/omar/ptz_ws/install/yolo_ros/lib/yolo_ros\n'}
+[4.921211] (yolo_ros) StdoutLine: {'line': b'\n'}
+[4.921243] (yolo_ros) StdoutLine: {'line': b'Installed /home/omar/ptz_ws/build/yolo_ros\n'}
+[4.921274] (yolo_ros) StdoutLine: {'line': b'running symlink_data\n'}
+[4.921339] (yolo_ros) StdoutLine: {'line': b'creating /home/omar/ptz_ws/install/yolo_ros/share/ament_index\n'}
+[4.921371] (yolo_ros) StdoutLine: {'line': b'creating /home/omar/ptz_ws/install/yolo_ros/share/ament_index/resource_index\n'}
+[4.921392] (yolo_ros) StdoutLine: {'line': b'creating /home/omar/ptz_ws/install/yolo_ros/share/ament_index/resource_index/packages\n'}
+[4.921413] (yolo_ros) StdoutLine: {'line': b'symbolically linking /home/omar/ptz_ws/build/yolo_ros/resource/yolo_ros -> /home/omar/ptz_ws/install/yolo_ros/share/ament_index/resource_index/packages\n'}
+[4.921433] (yolo_ros) StdoutLine: {'line': b'symbolically linking /home/omar/ptz_ws/build/yolo_ros/package.xml -> /home/omar/ptz_ws/install/yolo_ros/share/yolo_ros\n'}
+[4.934198] (yolo_ros) CommandEnded: {'returncode': 0}
+[4.936811] (yolo_ros) JobEnded: {'identifier': 'yolo_ros', 'rc': 0}
+[4.937141] (yolo_bringup) JobStarted: {'identifier': 'yolo_bringup'}
+[4.940497] (yolo_bringup) JobProgress: {'identifier': 'yolo_bringup', 'progress': 'cmake'}
+[4.941284] (yolo_bringup) Command: {'cmd': ['/usr/bin/cmake', '/home/omar/ptz_ws/src/yolo_ros/yolo_bringup', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/omar/ptz_ws/install/yolo_bringup'], 'cwd': '/home/omar/ptz_ws/build/yolo_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'omar'), ('SSH_CLIENT', '10.211.55.2 52675 22'), ('ZED_ENVIRONMENT', 'worktree-shell'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/omar/ptz_ws/install/yolo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/omar'), ('OLDPWD', '/home/omar/ptz_ws/src'), ('LIBGL_DRI3_DISABLE', '1'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/omar/ptz_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'omar'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/omar/.local/bin:/home/omar/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/omar/ptz_ws/install/yolo_ros:/home/omar/ptz_ws/install/yolo_msgs:/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/omar/ptz_ws/build/yolo_bringup'), ('SSH_CONNECTION', '10.211.55.2 52675 10.211.55.5 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/omar/ptz_ws/build/yolo_ros:/home/omar/ptz_ws/install/yolo_ros/lib/python3.10/site-packages:/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages:/home/omar/ptz_ws/build/ptz_robot:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/omar/ptz_ws/install/yolo_msgs:/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble')]), 'shell': False}
+[4.962251] (yolo_bringup) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[4.984370] (yolo_bringup) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[4.987078] (yolo_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[5.012442] (yolo_bringup) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[5.015353] (yolo_bringup) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[5.015460] (yolo_bringup) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[5.015642] (yolo_bringup) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[5.016822] (yolo_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.018878] (-) TimerEvent: {}
+[5.045446] (yolo_bringup) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.048294] (yolo_bringup) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.048432] (yolo_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.048644] (yolo_bringup) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.049875] (yolo_bringup) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[5.109170] (yolo_bringup) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[5.119066] (-) TimerEvent: {}
+[5.137111] (yolo_bringup) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[5.173174] (yolo_bringup) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.174269] (yolo_bringup) StdoutLine: {'line': b'-- Generating done\n'}
+[5.174779] (yolo_bringup) StdoutLine: {'line': b'-- Build files have been written to: /home/omar/ptz_ws/build/yolo_bringup\n'}
+[5.177386] (yolo_bringup) CommandEnded: {'returncode': 0}
+[5.177604] (yolo_bringup) JobProgress: {'identifier': 'yolo_bringup', 'progress': 'build'}
+[5.177627] (yolo_bringup) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/omar/ptz_ws/build/yolo_bringup', '--', '-j8', '-l8'], 'cwd': '/home/omar/ptz_ws/build/yolo_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'omar'), ('SSH_CLIENT', '10.211.55.2 52675 22'), ('ZED_ENVIRONMENT', 'worktree-shell'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/omar/ptz_ws/install/yolo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/omar'), ('OLDPWD', '/home/omar/ptz_ws/src'), ('LIBGL_DRI3_DISABLE', '1'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/omar/ptz_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'omar'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/omar/.local/bin:/home/omar/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/omar/ptz_ws/install/yolo_ros:/home/omar/ptz_ws/install/yolo_msgs:/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/omar/ptz_ws/build/yolo_bringup'), ('SSH_CONNECTION', '10.211.55.2 52675 10.211.55.5 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/omar/ptz_ws/build/yolo_ros:/home/omar/ptz_ws/install/yolo_ros/lib/python3.10/site-packages:/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages:/home/omar/ptz_ws/build/ptz_robot:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/omar/ptz_ws/install/yolo_msgs:/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble')]), 'shell': False}
+[5.189404] (yolo_bringup) CommandEnded: {'returncode': 0}
+[5.189751] (yolo_bringup) JobProgress: {'identifier': 'yolo_bringup', 'progress': 'install'}
+[5.190337] (yolo_bringup) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/omar/ptz_ws/build/yolo_bringup'], 'cwd': '/home/omar/ptz_ws/build/yolo_bringup', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'omar'), ('SSH_CLIENT', '10.211.55.2 52675 22'), ('ZED_ENVIRONMENT', 'worktree-shell'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/omar/ptz_ws/install/yolo_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/omar'), ('OLDPWD', '/home/omar/ptz_ws/src'), ('LIBGL_DRI3_DISABLE', '1'), ('SSH_TTY', '/dev/pts/0'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/omar/ptz_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'omar'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '8'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/omar/.local/bin:/home/omar/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/omar/ptz_ws/install/yolo_ros:/home/omar/ptz_ws/install/yolo_msgs:/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/omar/ptz_ws/build/yolo_bringup'), ('SSH_CONNECTION', '10.211.55.2 52675 10.211.55.5 22'), ('XDG_DATA_DIRS', '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/omar/ptz_ws/build/yolo_ros:/home/omar/ptz_ws/install/yolo_ros/lib/python3.10/site-packages:/home/omar/ptz_ws/install/yolo_msgs/local/lib/python3.10/dist-packages:/home/omar/ptz_ws/build/ptz_robot:/home/omar/ptz_ws/install/ptz_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/omar/ptz_ws/install/yolo_msgs:/home/omar/ptz_ws/install/ptz_robot:/opt/ros/humble')]), 'shell': False}
+[5.192675] (yolo_bringup) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.192886] (yolo_bringup) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[5.193107] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup//launch/yolo-world.launch.py\n'}
+[5.195718] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup//launch/yolo.launch.py\n'}
+[5.198324] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup//launch/yoloe.launch.py\n'}
+[5.201036] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup//launch/yolov10.launch.py\n'}
+[5.203568] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup//launch/yolov11.launch.py\n'}
+[5.206068] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup//launch/yolov12.launch.py\n'}
+[5.208599] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup//launch/yolov5.launch.py\n'}
+[5.211134] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup//launch/yolov8.launch.py\n'}
+[5.213761] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup//launch/yolov9.launch.py\n'}
+[5.216596] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/ament_index/resource_index/package_run_dependencies/yolo_bringup\n'}
+[5.219223] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/ament_index/resource_index/parent_prefix_path/yolo_bringup\n'}
+[5.219277] (-) TimerEvent: {}
+[5.221977] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/environment/ament_prefix_path.sh\n'}
+[5.224537] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/environment/ament_prefix_path.dsv\n'}
+[5.227182] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/environment/path.sh\n'}
+[5.229833] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/environment/path.dsv\n'}
+[5.232570] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/local_setup.bash\n'}
+[5.235320] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/local_setup.sh\n'}
+[5.238207] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/local_setup.zsh\n'}
+[5.241031] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/local_setup.dsv\n'}
+[5.243623] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/package.dsv\n'}
+[5.246412] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/ament_index/resource_index/packages/yolo_bringup\n'}
+[5.248866] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/cmake/yolo_bringupConfig.cmake\n'}
+[5.251608] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/cmake/yolo_bringupConfig-version.cmake\n'}
+[5.254177] (yolo_bringup) StdoutLine: {'line': b'-- Symlinking: /home/omar/ptz_ws/install/yolo_bringup/share/yolo_bringup/package.xml\n'}
+[5.257889] (yolo_bringup) CommandEnded: {'returncode': 0}
+[5.261711] (yolo_bringup) JobEnded: {'identifier': 'yolo_bringup', 'rc': 0}
+[5.262112] (-) EventReactorShutdown: {}

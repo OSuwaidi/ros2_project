@@ -39,9 +39,9 @@ class NextBestViewController(Node):
 
         # Tilt limits
         tilt_lower_limit = self.get_parameter("tilt_lower_limit").get_parameter_value().double_value
-        tilt_lower_buffer = 0.6
+        tilt_lower_buffer = 0.5
         tilt_upper_limit = self.get_parameter("tilt_upper_limit").get_parameter_value().double_value
-        tilt_upper_buffer = 0.1
+        tilt_upper_buffer = 0.2
 
         # Precompute soft limits
         self.soft_tilt_lower = tilt_lower_limit + tilt_lower_buffer
@@ -103,7 +103,7 @@ class NextBestViewController(Node):
         )
 
         # ---------------- Timer (control loop) ----------------
-        self.control_timer = self.create_timer(0.02, self.control_loop)  # runs at 20 Hz (times per second)
+        self.control_timer = self.create_timer(0.025, self.control_loop)  # runs at 40 Hz (times per second)
 
         self.get_logger().info(
             f"PTZ NBV controller started.\n"
@@ -160,7 +160,7 @@ class NextBestViewController(Node):
             if msg.detections:
                 for det in msg.detections:
                     if det.class_name in self.target_class:
-                        self.get_logger().info(f"Target '{self.target_class}' detected. Stopping scan & starting zoom.")
+                        self.get_logger().info(f"Target '{self.target_class}' detected with prob. {det.score:.2%}. Stopping scan & starting zoom.")
                         self.target_found = True
                         return
 
@@ -168,7 +168,7 @@ class NextBestViewController(Node):
 
     def control_loop(self):
         """
-        Runs at 20 Hz (20 runs per second in a continuous loop).
+        Runs at 40 Hz (40 runs per second in a continuous loop).
         - Search = continuous pan + oscillating tilt, with randomized pattern,
           but avoid pushing tilt joint into hard limits.
         - If target seen -> stop pan/tilt, zoom in.

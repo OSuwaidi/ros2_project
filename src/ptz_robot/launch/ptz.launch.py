@@ -3,11 +3,10 @@ import xacro
 import random
 from launch import LaunchDescription
 from ament_index_python.packages import get_package_share_directory
-from launch.substitutions import Command, PathJoinSubstitution, LaunchConfiguration, PythonExpression
+from launch.substitutions import PathJoinSubstitution, LaunchConfiguration, PythonExpression
 from launch_ros.actions import Node
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch_ros.parameter_descriptions import ParameterValue
 
 
 def generate_launch_description():
@@ -56,8 +55,10 @@ def generate_launch_description():
             "-world", world_name,
             "-name", "my_robot",  # Gazebo model name
             "-topic", "/robot_description",
-            '-z', '0.01',
-            "-Y", "3.14"  # yaw
+            '-z', '0.1',
+            '-x', "0.0",
+            "-y", "0.0",
+            "-Y", "0.0"  # yaw
         ],
         output="screen",
     )
@@ -78,7 +79,7 @@ def generate_launch_description():
         output="screen",
     )
 
-    # Image bridge connecting Gazebo Transport topic: /ptz/camera/image_raw -> republished ROS 2 topic: /ptz/camera/image_raw
+    # Image bridge connecting Gazebo Transport topic: /ptz/camera/image_raw -> republished as ROS 2 topic
     image_bridge = Node(
         package="ros_gz_image",
         executable="image_bridge",
@@ -118,7 +119,7 @@ def generate_launch_description():
             "input_image_topic": "/ptz/camera/image_raw",
             "yolo_encoding": "rgb8",
             "model": "yoloe-11l-seg-pf.pt",
-            "threshold": "0.55",
+            "threshold": "0.45",
             "iou": "0.1",
             "device": "cpu",
             "max_det": "5",

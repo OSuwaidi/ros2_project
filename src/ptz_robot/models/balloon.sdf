@@ -1,76 +1,104 @@
 <sdf version="1.9">
-<model name="red_balloon">
-  <!-- World pose: x y z roll pitch yaw -->
-  <!-- Change these to move the whole balloon -->
-  <pose>0.5 2.0 1.0 0 0 0</pose>
+  <model name="red_balloon">
+    <!-- World pose: x y z roll pitch yaw -->
+    <pose>0.5 2.0 1.0 0 0 0</pose>
 
-  <!-- Keep it static so it doesn't fall over / move -->
-  <static>true</static>
+    <!-- Keep it static so it doesn't move -->
+    <static>true</static>
 
-  <link name="balloon_link">
-    <!-- Inertial doesn't matter much for static=true, but we keep it valid -->
-    <inertial>
-      <mass>0.05</mass>
-      <inertia>
-        <ixx>1e-4</ixx><iyy>1e-4</iyy><izz>1e-4</izz>
-        <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
-      </inertia>
-    </inertial>
+    <link name="balloon_link">
+      <!-- Inertial (mostly irrelevant for static=true, but kept valid) -->
+      <inertial>
+        <mass>0.06</mass>
+        <inertia>
+          <ixx>1.5e-4</ixx><iyy>1.5e-4</iyy><izz>1.5e-4</izz>
+          <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+        </inertia>
+      </inertial>
 
-    <!-- Balloon collision (simple sphere) -->
-    <collision name="balloon_collision">
-      <!-- Local pose relative to link -->
-      <pose>0 0 0.15 0 0 0</pose>
-      <geometry>
-        <sphere>
-          <radius>0.15</radius> <!-- 15 cm radius balloon -->
-        </sphere>
-      </geometry>
-    </collision>
+      <!-- Balloon collision (sphere) -->
+      <collision name="balloon_collision">
+        <!-- Center of balloon above the string attachment -->
+        <pose>0 0 0.22 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.22</radius> <!-- 22 cm radius balloon -->
+          </sphere>
+        </geometry>
+      </collision>
 
-    <!-- Balloon visual (red sphere) -->
-    <visual name="balloon_visual">
-      <pose>0 0 0.15 0 0 0</pose>
-      <geometry>
-        <sphere>
-          <radius>0.15</radius>
-        </sphere>
-      </geometry>
-      <material>
-        <!-- RGBA values, 0–1 -->
-        <ambient>1 0 0 1</ambient>   <!-- red -->
-        <diffuse>1 0 0 1</diffuse>   <!-- red -->
-        <specular>0.5 0.5 0.5 1</specular>
-      </material>
-    </visual>
+      <!-- Main balloon visual: bright, saturated, evenly lit red -->
+      <visual name="balloon_visual">
+        <pose>0 0 0.22 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.22</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <!-- Moderate ambient, strong diffuse red -->
+          <ambient>0.4 0.02 0.02 1</ambient>
+          <diffuse>0.95 0.05 0.05 1</diffuse>
+          <!-- Strong white specular for glossy look -->
+          <specular>0.9 0.9 0.9 1</specular>
+          <!-- Slight emissive so it pops even in darker scenes -->
+          <emissive>0.2 0.02 0.02 1</emissive>
+        </material>
+        <!-- Keep it consistently bright (avoid harsh shadows) -->
+        <cast_shadows>false</cast_shadows>
+        <transparency>0.0</transparency> <!-- fully opaque -->
+      </visual>
 
-    <!-- String collision (thin cylinder under the balloon) -->
-    <collision name="string_collision">
-      <pose>0 0 -0.2 0 0 0</pose>
-      <geometry>
-        <cylinder>
-          <radius>0.005</radius>   <!-- 5 mm thick -->
-          <length>0.4</length>     <!-- 40 cm long -->
-        </cylinder>
-      </geometry>
-    </collision>
+      <!-- Optional small highlight patch to give YOLO extra edges/features -->
+      <visual name="balloon_highlight">
+        <!-- Slightly offset on the “front” side -->
+        <pose>0.12 0.05 0.28 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.06</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1.0 0.9 0.9 1</ambient>
+          <diffuse>1.0 0.9 0.9 1</diffuse>
+          <specular>1.0 1.0 1.0 1</specular>
+          <emissive>0.5 0.4 0.4 1</emissive>
+        </material>
+        <!-- Semi-transparent highlight -->
+        <transparency>0.4</transparency>
+        <cast_shadows>false</cast_shadows>
+      </visual>
 
-    <!-- String visual -->
-    <visual name="string_visual">
-      <pose>0 0 -0.2 0 0 0</pose>
-      <geometry>
-        <cylinder>
-          <radius>0.005</radius>
-          <length>0.4</length>
-        </cylinder>
-      </geometry>
-      <material>
-        <ambient>0.2 0.2 0.2 1</ambient>  <!-- dark grey -->
-        <diffuse>0.3 0.3 0.3 1</diffuse>
-        <specular>0.5 0.5 0.5 1</specular>
-      </material>
-    </visual>
+      <!-- String collision (simple thin cylinder) -->
+      <collision name="string_collision">
+        <!-- Center of string below the balloon -->
+        <pose>0 0 -0.3 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.006</radius>   <!-- 6 mm -->
+            <length>0.6</length>     <!-- 60 cm -->
+          </cylinder>
+        </geometry>
+      </collision>
 
-  </link>
-</model>
+      <!-- String visual -->
+      <visual name="string_visual">
+        <pose>0 0 -0.3 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.006</radius>
+            <length>0.6</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.2 0.2 0.2 1</ambient>
+          <diffuse>0.4 0.4 0.4 1</diffuse>
+          <specular>0.6 0.6 0.6 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+        <cast_shadows>false</cast_shadows>
+      </visual>
+
+    </link>
+  </model>
 </sdf>

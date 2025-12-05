@@ -70,6 +70,12 @@
 
     <include>
     <uri>
+    https://fuel.gazebosim.org/1.0/OpenRobotics/models/Sky
+    </uri>
+    </include>
+
+    <include>
+    <uri>
         model://cup1
     </uri>
     <name>cup1</name>

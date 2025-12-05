@@ -248,7 +248,7 @@
         <render_engine>ogre2</render_engine>
     </plugin>
 
-    <!-- Joint position controller plugins for Ignition -->
+    <!-- Joint Position Controller plugin (GUI) for Ignition -->
     <!-- Pan -->
     <!-- <plugin
       filename="ignition-gazebo-joint-position-controller-system"
@@ -281,7 +281,7 @@
 
 
     <!-- Velocity controller plugins -->
-    <!-- default topic is: /model/my_robot/joint/pan_joint/cmd_vel -->
+    <!-- subscribe/recieve velocity commands on topic (default): /model/my_robot/joint/pan_joint/cmd_vel -->
     <!-- Pan velocity controller -->
     <plugin
       filename="ignition-gazebo-joint-controller-system"
@@ -304,13 +304,22 @@
     </plugin>
 
 
+    <!-- Publish joint states for all joints in this model -->
+    <plugin
+      filename="ignition-gazebo-joint-state-publisher-system"
+      name="ignition::gazebo::systems::JointStatePublisher">
+      <!-- This is the Gazebo JointState Transport topic; we’ll bridge/remap it in ROS -->
+      <topic>/joint_states</topic>
+    </plugin>
+
+
     <!-- KEYBOARD CONTROLS -->
     <!-- STOP motion with 'S' key -->
-    <plugin
+    <!-- <plugin
       filename="ignition-gazebo-triggered-publisher-system"
       name="ignition::gazebo::systems::TriggeredPublisher">
       <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-        <match field="data">83</match> <!-- 'S' -->
+        <match field="data">83</match>
       </input>
       <output type="ignition.msgs.Double"
           topic="/model/my_robot/joint/pan_joint/cmd_vel">
@@ -321,7 +330,7 @@
       filename="ignition-gazebo-triggered-publisher-system"
       name="ignition::gazebo::systems::TriggeredPublisher">
       <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-        <match field="data">83</match> <!-- 'S' -->
+        <match field="data">83</match>
       </input>
       <output type="ignition.msgs.Double"
           topic="/model/my_robot/joint/tilt_joint/cmd_vel">
@@ -332,92 +341,91 @@
       filename="ignition-gazebo-triggered-publisher-system"
       name="ignition::gazebo::systems::TriggeredPublisher">
       <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-        <match field="data">83</match> <!-- 'S' -->
+        <match field="data">83</match>
       </input>
       <output type="ignition.msgs.Double"
           topic="/model/my_robot/joint/zoom_joint/cmd_vel">
         data: 0.0
       </output>
-    </plugin>
-
+    </plugin> -->
 
     <!-- Pan LEFT  with left arrow -->
-    <plugin
+    <!-- <plugin
       filename="ignition-gazebo-triggered-publisher-system"
       name="ignition::gazebo::systems::TriggeredPublisher">
       <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-        <match field="data">16777234</match>  <!-- 16777234 = left arrow -->
+        <match field="data">16777234</match>
       </input>
       <output type="ignition.msgs.Double"
           topic="/model/my_robot/joint/pan_joint/cmd_vel">
         data: 1.0
       </output>
-    </plugin>
+    </plugin> -->
 
     <!-- Pan RIGHT with right arrow -->
-    <plugin
+    <!-- <plugin
       filename="ignition-gazebo-triggered-publisher-system"
       name="ignition::gazebo::systems::TriggeredPublisher">
       <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-        <match field="data">16777236</match>  <!-- 16777236 = right arrow -->
+        <match field="data">16777236</match>
       </input>
       <output type="ignition.msgs.Double"
           topic="/model/my_robot/joint/pan_joint/cmd_vel">
         data: -1.0
       </output>
-    </plugin>
+    </plugin> -->
 
     <!-- Tilt UP with up arrow -->
-    <plugin
+    <!-- <plugin
       filename="ignition-gazebo-triggered-publisher-system"
       name="ignition::gazebo::systems::TriggeredPublisher">
       <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-        <match field="data">16777235</match>  <!-- 16777235 = up arrow -->
+        <match field="data">16777235</match>
       </input>
       <output type="ignition.msgs.Double"
           topic="/model/my_robot/joint/tilt_joint/cmd_vel">
-        data: -0.5  <!-- look up a bit; negative for your joint if needed -->
+        data: -0.5
       </output>
-    </plugin>
+    </plugin> -->
 
     <!-- Tilt DOWN with down arrow -->
-    <plugin
+    <!-- <plugin
       filename="ignition-gazebo-triggered-publisher-system"
       name="ignition::gazebo::systems::TriggeredPublisher">
       <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-        <match field="data">16777237</match>  <!-- 16777237 = down arrow -->
+        <match field="data">16777237</match>
       </input>
       <output type="ignition.msgs.Double"
           topic="/model/my_robot/joint/tilt_joint/cmd_vel">
         data: 0.5
       </output>
-    </plugin>
+    </plugin> -->
 
     <!-- Zoom IN with 'z' -->
-    <plugin
+    <!-- <plugin
       filename="ignition-gazebo-triggered-publisher-system"
       name="ignition::gazebo::systems::TriggeredPublisher">
       <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-        <match field="data">90</match>  <!-- 'Z' keycode -->
+        <match field="data">90</match>
       </input>
       <output type="ignition.msgs.Double"
           topic="/model/my_robot/joint/zoom_joint/cmd_vel">
         data: 0.20
       </output>
-    </plugin>
+    </plugin> -->
 
     <!-- Zoom OUT with 'x' -->
-    <plugin
+    <!-- <plugin
       filename="ignition-gazebo-triggered-publisher-system"
       name="ignition::gazebo::systems::TriggeredPublisher">
       <input type="ignition.msgs.Int32" topic="/keyboard/keypress">
-        <match field="data">88</match>  <!-- 'X' keycode -->
+        <match field="data">88</match>
       </input>
       <output type="ignition.msgs.Double"
           topic="/model/my_robot/joint/zoom_joint/cmd_vel">
         data: -0.15
       </output>
-    </plugin>
+    </plugin> -->
 
 
   </gazebo>

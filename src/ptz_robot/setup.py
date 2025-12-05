@@ -16,6 +16,10 @@ setup(
         (os.path.join("share", package_name, "launch"), glob("launch/*.py")),
         # Install urdf/xacro files
         (os.path.join("share", package_name, "urdf"), glob("urdf/*")),
+        # Install Gazebo world files
+        (os.path.join('share', package_name, 'worlds'), glob('worlds/*.sdf')),
+        # Install Gazebo models (props)
+        (os.path.join('share', package_name, 'models'), glob('models/*.sdf')),
     ],
     install_requires=["setuptools"],
     zip_safe=True,

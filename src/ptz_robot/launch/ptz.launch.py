@@ -1,4 +1,6 @@
 import os
+import xacro
+import random
 from launch import LaunchDescription
 from ament_index_python.packages import get_package_share_directory
 from launch.substitutions import Command, PathJoinSubstitution, LaunchConfiguration, PythonExpression
@@ -6,24 +8,15 @@ from launch_ros.actions import Node
 from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.parameter_descriptions import ParameterValue
-from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
-    xacro_file = PathJoinSubstitution(
-        [
-            FindPackageShare(
-                "ptz_robot"  # MUST match the package name in "package.xml", the name used to create the package
-            ),
-            "urdf",
-            "ptz_robot.urdf.xacro",  # MUST be the exact main ".urdf.xarco" file describing your robot
-        ]
-    )
+    # Point to the package root (first package name directory inside of "src": "~/<name_ws>/src/<pkg_name>")
+    pkg_dir = get_package_share_directory("ptz_robot")  # MUST match the package name in "package.xml", the name used to create the package
+    xacro_file = os.path.join(pkg_dir, "urdf", "ptz_robot.urdf.xacro")
 
-    # Run xacro and **explicitly** generate URDF as a string
-    robot_description = ParameterValue(
-        Command(["xacro", " ", xacro_file]), value_type=str
-    )
+    # Process file via xacro and **explicitly** generate URDF as a string
+    robot_description = xacro.process_file(xacro_file).toxml()
 
     rsp_node = Node(
         package="robot_state_publisher",
@@ -45,17 +38,18 @@ def generate_launch_description():
     )
     # Create a variable name substitution to access the value of the argument
     world_file = LaunchConfiguration("world")
-    world_name = PythonExpression(["'", world_file, "'.removesuffix('.sdf')"])
+    world_file_pth = PathJoinSubstitution([pkg_dir, "worlds", world_file])
 
     gazebo_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')
         ),
-        launch_arguments={'gz_args': ["-r", " ", world_file]}.items(),
+        launch_arguments={'gz_args': ["-r", " ", world_file_pth]}.items(),
     )
 
     # Spawner node to spawn robot model in Gazebo Sim
-    spawn_entity_node = Node(
+    world_name = PythonExpression(["'", world_file, "'.removesuffix('.sdf')"])
+    spawn_robot_node = Node(
         package="ros_gz_sim",
         executable="create",
         arguments=[
@@ -63,7 +57,23 @@ def generate_launch_description():
             "-name", "my_robot",  # Gazebo model name
             "-topic", "/robot_description",
             '-z', '0.01',
-            "-Y", "3.14"
+            "-Y", "3.14"  # yaw
+        ],
+        output="screen",
+    )
+
+    # Spawner node to spawn target object in Gazebo Sim
+    balloon_file = os.path.join(pkg_dir, "models", "balloon.sdf")
+    spawn_balloon_node = Node(
+        package="ros_gz_sim",
+        executable="create",
+        arguments=[
+            "-world", world_name,
+            "-name", "red_balloon",
+            "-file", balloon_file,
+            '-x', str(random.uniform(-5.0, 5.0)),
+            "-y", str(random.uniform(-5.0, 5.0)),
+            "-z", str(random.uniform(1.0, 5.0))
         ],
         output="screen",
     )
@@ -79,7 +89,7 @@ def generate_launch_description():
         ],
     )
 
-    # Parameter bridge for camera_info + zoom joint command
+    # Parameter bridge for camera_info + joint commands (expose them to ROS)
     param_bridge = Node(
         package="ros_gz_bridge",
         executable="parameter_bridge",
@@ -88,16 +98,20 @@ def generate_launch_description():
         arguments=[
             # Camera info: Gazebo <-> ROS
             "/ptz/camera/camera_info@sensor_msgs/msg/CameraInfo@ignition.msgs.CameraInfo",
-            # Zoom joint velocity command: ROS <-> Gazebo
-            # "/model/my_robot/joint/zoom_joint/cmd_vel@std_msgs/msg/Float64@ignition.msgs.Double",
+            # Joint velocity commands: Gazebo <-> ROS (to be able to drive joints from ROS)
+            "/model/my_robot/joint/pan_joint/cmd_vel@std_msgs/msg/Float64@ignition.msgs.Double",
+            "/model/my_robot/joint/tilt_joint/cmd_vel@std_msgs/msg/Float64@ignition.msgs.Double",
+            "/model/my_robot/joint/zoom_joint/cmd_vel@std_msgs/msg/Float64@ignition.msgs.Double",
+            # Joint states Gazebo <-> ROS publishing
+            "/joint_states@sensor_msgs/msg/JointState@ignition.msgs.Model"
         ],
     )
 
     # Include YOLOv8 launch (via yolo_bringup) listening on /camera/image_raw
     yolo_bringup_dir = get_package_share_directory("yolo_bringup")
-    yolov8_launch = IncludeLaunchDescription(
+    yoloe_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(yolo_bringup_dir, "launch", "yolov8.launch.py")
+            os.path.join(yolo_bringup_dir, "launch", "yoloe.launch.py")
         ),
         launch_arguments={
             # Use the bridged camera topic
@@ -149,22 +163,31 @@ def generate_launch_description():
     #     output="screen",
     # )
 
-    # PTZ control node (NBV + IBVS logic)
-    # controller_node = Node(
-    #     package='ptz_control_package', executable='ptz_controller_node', output='screen',
-    #     parameters=[{'target_class': 'bottle'}]  # example parameter for target class name
-    # ),
+    # PTZ control node
+    controller_node = Node(
+        package='ptz_controller',
+        executable='controller',  # class name
+        name="ptz_controller",
+        output='screen',
+        # parameters=[
+        #     {
+        #         'target_class': 'balloon',
+        #     }
+        # ]
+    )
 
     return LaunchDescription(
         [
             world_file_arg,
             rsp_node,
             gazebo_sim,
-            spawn_entity_node,
+            spawn_robot_node,
+            spawn_balloon_node,
             image_bridge,
             param_bridge,
-            yolov8_launch,
+            yoloe_launch,
             yolo_image_view,
-            camera_compressed_view
+            camera_compressed_view,
+            controller_node
         ]
     )
